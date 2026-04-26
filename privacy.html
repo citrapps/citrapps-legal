@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy | Citrapps</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy | idiomed</title>
+  <meta name="description" content="Privacy Policy for the idiomed mobile application by Citrapps." />
+
   <style>
     :root {
-      --bg: #f7f8fb;
-      --paper: #ffffff;
-      --text: #15171c;
-      --muted: #667085;
-      --soft: #eef2f7;
-      --line: #e5e7eb;
-      --accent: #f97316;
-      --accent-soft: #fff3e8;
-      --green-soft: #ecfdf3;
-      --green-text: #027a48;
-      --red-soft: #fff1f3;
-      --red-text: #b42318;
-      --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      --bg: #f4f1eb;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666666;
+      --border: #d8d3c9;
+      --accent: #223a63;
+      --max-width: 1120px;
     }
 
     * {
@@ -31,161 +28,186 @@
 
     body {
       margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(249, 115, 22, 0.14), transparent 32rem),
-        linear-gradient(180deg, #ffffff 0%, var(--bg) 38%, #f3f5f8 100%);
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.72;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.62;
     }
 
     a {
       color: inherit;
+      text-decoration: none;
     }
 
-    .page {
-      max-width: 1040px;
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
       margin: 0 auto;
-      padding: 32px 18px 72px;
-    }
-
-    .topbar {
+      padding: 22px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
-      margin-bottom: 28px;
+      gap: 24px;
     }
 
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.78);
-      color: #344054;
-      text-decoration: none;
+    .brand {
+      font-size: 20px;
       font-weight: 700;
-      font-size: 14px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+      letter-spacing: -0.03em;
     }
 
-    .brand-pill {
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: #9a3412;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.02em;
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .brand:hover,
+    .nav a:hover {
+      color: var(--accent);
+    }
+
+    .main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 72px 24px 40px;
     }
 
     .hero {
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background: linear-gradient(135deg, #ffffff 0%, #fff8f2 100%);
-      box-shadow: var(--shadow);
-      padding: 42px;
-      margin-bottom: 24px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: #9a3412;
-      font-size: 13px;
-      font-weight: 800;
-      margin-bottom: 18px;
+      padding: 8px 0 56px;
+      border-bottom: 1px solid var(--border);
     }
 
     .hero h1 {
       margin: 0;
-      max-width: 780px;
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1.05;
-      letter-spacing: -0.045em;
+      max-width: 820px;
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -0.07em;
+      font-weight: 750;
     }
 
-    .hero-subtitle {
-      margin: 18px 0 0;
-      max-width: 760px;
+    .hero p {
+      margin: 26px 0 0;
+      max-width: 700px;
+      font-size: 18px;
       color: var(--muted);
-      font-size: 17px;
     }
 
-    .meta-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
       gap: 12px;
-      margin-top: 28px;
-      max-width: 620px;
+      margin-top: 30px;
     }
 
-    .meta-card {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.72);
-      padding: 16px;
+    .meta-box {
+      border: 1px solid var(--border);
+      background: transparent;
+      padding: 12px 14px;
+      min-width: 190px;
     }
 
     .meta-label {
       display: block;
+      font-size: 13px;
       color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
       margin-bottom: 4px;
     }
 
     .meta-value {
-      font-weight: 800;
-      color: #1d2939;
+      display: block;
+      color: var(--text);
+      font-weight: 650;
+      font-size: 14px;
     }
 
-    .content-grid {
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--text);
+      background: var(--text);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .button:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+
+    .button.secondary:hover {
+      background: var(--surface);
+      border-color: var(--text);
+      color: var(--text);
+    }
+
+    .content-layout {
       display: grid;
-      grid-template-columns: 260px minmax(0, 1fr);
-      gap: 24px;
-      align-items: start;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 28px;
+      padding-top: 56px;
     }
 
     .toc {
       position: sticky;
-      top: 18px;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.88);
-      box-shadow: 0 12px 36px rgba(15, 23, 42, 0.05);
-      padding: 18px;
-      max-height: calc(100vh - 36px);
+      top: 20px;
+      align-self: start;
+      border: 1px solid var(--border);
+      background: transparent;
+      padding: 22px;
+      max-height: calc(100vh - 40px);
       overflow: auto;
     }
 
     .toc-title {
-      margin: 0 0 12px;
-      color: #1d2939;
-      font-size: 14px;
-      font-weight: 900;
-      letter-spacing: 0.02em;
+      margin: 0 0 16px;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 700;
     }
 
     .toc a {
       display: block;
-      padding: 7px 0;
-      color: #667085;
-      text-decoration: none;
+      padding: 8px 0;
+      color: var(--muted);
       font-size: 13px;
       line-height: 1.35;
-      border-bottom: 1px solid rgba(229, 231, 235, 0.7);
+      border-top: 1px solid var(--border);
     }
 
     .toc a:hover {
@@ -197,131 +219,90 @@
     }
 
     .section {
-      position: relative;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: var(--paper);
+      border: 1px solid var(--border);
+      background: var(--surface);
       padding: 30px;
-      box-shadow: 0 14px 36px rgba(15, 23, 42, 0.055);
       margin-bottom: 18px;
     }
 
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
     .section-number {
+      flex: 0 0 auto;
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--border);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 38px;
-      height: 38px;
-      border-radius: 14px;
-      background: var(--accent-soft);
-      color: #c2410c;
-      font-weight: 900;
-      font-size: 14px;
-      margin-bottom: 12px;
-    }
-
-    .section-kicker {
-      color: var(--accent);
+      color: var(--muted);
       font-size: 13px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 6px;
-    }
-
-    h2 {
-      margin: 0 0 14px;
-      font-size: 24px;
-      line-height: 1.25;
-      letter-spacing: -0.025em;
-      color: #111827;
-    }
-
-    p {
-      margin: 0 0 14px;
-      color: #344054;
-      font-size: 15.5px;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    .policy-list {
-      margin: 6px 0 0;
-      padding: 0;
-      list-style: none;
-      display: grid;
-      gap: 10px;
-    }
-
-    .policy-list li {
-      position: relative;
-      padding: 12px 14px 12px 40px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: #fafafa;
-      color: #344054;
-      font-size: 15px;
-    }
-
-    .policy-list li::before {
-      content: "•";
-      position: absolute;
-      left: 17px;
-      top: 11px;
-      color: var(--accent);
-      font-size: 22px;
-      line-height: 1;
-      font-weight: 900;
-    }
-
-    .page-marker {
-      display: inline-flex;
-      margin-top: 12px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: #f2f4f7;
-      color: #98a2b3;
-      font-size: 12px;
       font-weight: 700;
     }
 
-    .appendix-section {
-      padding: 30px;
+    h2 {
+      margin: 0;
+      color: var(--text);
+      font-size: 25px;
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    .policy-list {
+      margin: 8px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+
+    .policy-list li {
+      margin-bottom: 10px;
+    }
+
+    .page-marker {
+      display: inline-block;
+      margin: 6px 0 16px;
+      padding: 5px 8px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      background: transparent;
     }
 
     .table-wrap {
       width: 100%;
       overflow-x: auto;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: white;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      margin-top: 18px;
     }
 
     .data-table {
       width: 100%;
-      min-width: 720px;
+      min-width: 760px;
       border-collapse: collapse;
       font-size: 14px;
     }
 
     .data-table th {
       text-align: left;
-      background: #f9fafb;
-      color: #475467;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      color: var(--text);
       padding: 14px 16px;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid var(--border);
+      font-weight: 700;
+      background: #f8f6f1;
     }
 
     .data-table td {
       vertical-align: top;
       padding: 16px;
-      border-bottom: 1px solid var(--line);
-      color: #344054;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
     }
 
     .data-table tr:last-child td {
@@ -329,54 +310,60 @@
     }
 
     .data-table td:first-child {
+      color: var(--text);
+      font-weight: 650;
       width: 28%;
-      font-weight: 800;
-      color: #1d2939;
-    }
-
-    .data-table td:last-child {
-      width: 15%;
     }
 
     .status {
       display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 46px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      font-weight: 900;
+      border: 1px solid var(--border);
+      padding: 4px 8px;
+      color: var(--text);
+      background: transparent;
       font-size: 12px;
+      font-weight: 650;
       white-space: nowrap;
     }
 
-    .status.yes {
-      color: var(--green-text);
-      background: var(--green-soft);
-    }
-
-    .status.no {
-      color: var(--red-text);
-      background: var(--red-soft);
-    }
-
-    .footer-note {
-      text-align: center;
+    .footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
       color: var(--muted);
-      font-size: 13px;
-      margin-top: 28px;
+      font-size: 14px;
     }
 
-    @media (max-width: 860px) {
-      .hero {
-        padding: 30px 22px;
+    .footer-left strong {
+      color: var(--text);
+    }
+
+    .footer-names {
+      margin-top: 8px;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .footer a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 900px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .meta-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .content-grid {
+      .content-layout {
         grid-template-columns: 1fr;
       }
 
@@ -385,36 +372,103 @@
         max-height: none;
       }
 
+      .footer {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .main,
+      .header-inner,
+      .footer {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .hero {
+        padding-bottom: 48px;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
       .section {
         padding: 22px;
+      }
+
+      .section-header {
+        flex-direction: column;
       }
     }
   </style>
 </head>
-<body>
-  <main class="page">
-    <div class="topbar">
-      <a class="back-link" href="index.html">← Legal Documents</a>
-      <div class="brand-pill">Citrapps</div>
-    </div>
 
-    <header class="hero">
-      <div class="eyebrow">Privacy Policy</div>
-      <h1>idiomed Privacy Policy</h1>
-      <p class="hero-subtitle">Effective date: April 26, 2026 - Last updated: April 26, 2026</p>
-      <div class="meta-grid">
-        <div class="meta-card">
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://citrapps.com/">Citrapps</a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="https://legal.citrapps.com/">Legal Center</a>
+        <a href="terms.html">Terms</a>
+        <a href="kvkk.html">KVKK</a>
+        <a href="eula.html">EULA</a>
+        <a href="mailto:contact@citrapps.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <h1>Privacy Policy.</h1>
+
+      <p>
+        This Privacy Policy explains how personal information is collected,
+        used, stored, shared, and protected in connection with the idiomed
+        mobile application.
+      </p>
+
+      <div class="meta-row">
+        <div class="meta-box">
+          <span class="meta-label">Product</span>
+          <span class="meta-value">idiomed</span>
+        </div>
+
+        <div class="meta-box">
           <span class="meta-label">Effective date</span>
           <span class="meta-value">April 26, 2026</span>
         </div>
-        <div class="meta-card">
+
+        <div class="meta-box">
           <span class="meta-label">Last updated</span>
           <span class="meta-value">April 26, 2026</span>
         </div>
       </div>
-    </header>
 
-    <div class="content-grid">
+      <div class="hero-actions">
+        <a class="button" href="#contents">View Contents</a>
+        <a class="button secondary" href="https://legal.citrapps.com/">Back to Legal Center</a>
+      </div>
+    </section>
+
+    <div class="content-layout" id="contents">
       <aside class="toc" aria-label="Table of contents">
         <p class="toc-title">Contents</p>
         <a href="#1-introduction">1. Introduction</a>
@@ -446,246 +500,342 @@
       </aside>
 
       <article class="document">
-<section class="section" id="1-introduction">
-  <div class="section-number">01</div>
-  <h2>1. Introduction</h2>
-  <p>This Privacy Policy explains how Barış Kayırtar, doing business as Citrapps (&quot;Citrapps&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), collects, uses, stores, shares, and protects personal information when users access or use the idiomed mobile application and related services (the &quot;App&quot; or &quot;Services&quot;). idiomed is a mobile educational platform designed for medical school students. The App may provide study tools such as question banks, flashcards, clinical case-based educational content, progress tracking, personalized study features, usage limits, subscriptions, and related learning features. By using the App, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with this Privacy Policy, please do not use the App.</p>
-</section>
-<section class="section" id="2-educational-and-medical-disclaimer">
-  <div class="section-number">02</div>
-  <h2>2. Educational and Medical Disclaimer</h2>
-  <p>The App is provided for educational purposes only. It does not provide medical advice, diagnosis, treatment, clinical decision support, or professional healthcare services. Content in the App may include AI-generated or AI-assisted educational materials. Although we aim to provide accurate and useful educational content, errors, omissions, outdated information, or inaccuracies may occur. Users should verify medical information using official textbooks, academic resources, clinical guidelines, instructors, or licensed healthcare professionals. The App must not be used for patient care, diagnosis, treatment decisions, emergency situations, or any real-world clinical decision-making.</p>
-</section>
-<section class="section" id="3-who-can-use-the-app">
-  <div class="section-number">03</div>
-  <h2>3. Who Can Use the App</h2>
-  <p>The App is intended for users who are at least 18 years old. The App is not directed to children or minors. We do not knowingly collect, solicit, or market to users under 18 years of age or the equivalent age specified by applicable law in the user jurisdiction. If we become aware that we have collected personal information from a child or minor contrary to this Policy, we will take reasonable steps to deactivate the account and delete such information, unless retention is required by applicable law.</p>
-</section>
-<section class="section" id="4-information-we-collect">
-  <div class="section-number">04</div>
-  <h2>4. Information We Collect</h2>
-  <p>We collect information that users provide directly, information generated through use of the App, information received through login or payment platforms, and technical information collected automatically through our service providers. Account and identity information: email address; full name; username; account creation date; contact preferences; login method, including email/password, Google Sign-In, or Apple Sign-In; and authentication identifiers managed by Firebase Authentication. Profile, education, and personalization information: school, class year, country, city, clinical level, optional birth date, theme preference such as dark mode, exam date, study goal, study style, hard topics, strong and weak subjects, study hours, study time, target percentile, anxiety-related survey answers, TUS date, TUS attempt information, motivation, weak-action preference, study tools used, persona type, and related personalization fields. Activity and learning analytics: login count, last login, streak, total questions solved, correct answers, lifetime quiz count, daily question/card usage and limits, daily goals, total study minutes, subject statistics, subject totals, last studied subject, subject study count, daily statistics such as solved questions, correct answers and study minutes, badges, study sessions, saved questions, saved flashcards, incorrect questions, custom decks, list codes for shared question lists, and report or feedback submissions.</p>
-  <div class="page-marker">Page 1 · idiomed Privacy Policy</div>
-  <p>Subscription and purchase information: subscription type, premium/free status, trial status, purchase or entitlement status, and information needed to verify App Store or Google Play subscription access. We do not directly collect or store payment card numbers, security codes, or full payment instrument details. Payments are processed by Apple App Store or Google Play. Technical, device, and diagnostic information: device and app information, mobile operating system, app version, device identifiers or app instance identifiers where available, IP address or proxy server information, language preferences, mobile carrier or network information, app usage events, crash logs, error logs, performance data, analytics identifiers, push notification tokens, and related technical data collected through Firebase, Google Analytics, and similar services. Feedback and reports: if you submit feedback, report a question, or send a complaint, we may collect the content of your message, related question identifiers, your user ID, and associated metadata needed to review and respond. Google API information: if you use Google Sign-In or other Google-related login features, we may receive limited account information such as your name, email address, and authentication identifiers, depending on your Google account settings and permissions. Our use of information received from Google APIs will comply with the Google API Services User Data Policy, including applicable Limited Use requirements.</p>
-</section>
-<section class="section" id="5-sensitive-information-and-information-you-should-not-submit">
-  <div class="section-number">05</div>
-  <h2>5. Sensitive Information and Information You Should Not Submit</h2>
-  <p>The App is designed for medical education and study tracking. It is not designed to collect patient records, protected health information, real clinical case files, biometric data, or real-world clinical care information. Users cannot upload their own patient files or clinical case files through the App. However, users may be able to send feedback, reports, support messages, shared lists, or similar content. You must not submit patient information, protected health information, medical records, real clinical case details, sensitive personal data, or any information that identifies another person. We may collect education-related profile information, survey responses, and learning analytics. Some jurisdictions may treat certain account, education, login, demographic, or inference data as sensitive. We process such information only as described in this Policy, where necessary to provide and improve the App, where you choose to provide it, or where otherwise permitted by applicable law. We do not intentionally collect health records or patient information. If prohibited sensitive information is submitted accidentally, we may delete it, restrict access to it, or take other reasonable steps where possible.</p>
-</section>
-<section class="section" id="6-how-we-use-information">
-  <div class="section-number">06</div>
-  <h2>6. How We Use Information</h2>
-  <p>We use personal information for the following purposes:</p>
-  <ul class="policy-list">
-    <li>to create, authenticate, secure, and manage user accounts;</li>
-    <li>to provide App features such as quizzes, flashcards, saved questions, saved flashcards, custom decks, shared list codes, study tracking, and progress review;</li>
-    <li>to personalize the learning experience based on profile, survey, performance, and study data;</li>
-    <li>to track study progress, learning history, subject activity, streaks, goals, badges, and performance statistics;</li>
-    <li>to manage free plans, usage limits, premium subscriptions, trial access, purchase verification, and entitlement status;</li>
-    <li>to send push notifications such as study reminders, streak reminders, daily goals, account messages, and service updates;</li>
-    <li>to analyze usage trends, improve learning recommendations, detect errors, troubleshoot crashes, maintain reliability, and develop new features;</li>
-    <li>to respond to feedback, reports, complaints, and support requests;</li>
-    <li>to maintain account security, prevent misuse, apply fair usage limits, detect suspicious activity, and protect the integrity of the App;</li>
-  </ul>
-  <div class="page-marker">Page 2 · idiomed Privacy Policy</div>
-  <ul class="policy-list">
-    <li>to comply with legal obligations, enforce our terms and policies, and establish, exercise, or defend legal claims.</li>
-  </ul>
-</section>
-<section class="section" id="7-legal-bases-for-processing">
-  <div class="section-number">07</div>
-  <h2>7. Legal Bases for Processing</h2>
-  <p>Where applicable law requires a legal basis for processing personal information, including for users in the European Economic Area, United Kingdom, Switzerland, or similar jurisdictions, we rely on one or more of the following legal bases:</p>
-  <ul class="policy-list">
-    <li>Performance of a contract: to create accounts, provide the App, manage subscriptions, apply usage limits, and deliver requested features;</li>
-    <li>Legitimate interests: to improve the App, maintain security, prevent abuse, analyze usage trends, troubleshoot technical issues, and develop better educational features, provided those interests are not overridden by user rights and interests;</li>
-    <li>Consent: where required for specific features, optional profile information, certain notifications, analytics choices, or other processing that requires consent;</li>
-    <li>Legal obligations: to comply with applicable laws, court orders, platform rules, tax/accounting requirements, and lawful requests;</li>
-    <li>Legal claims: to establish, exercise, or defend legal claims;</li>
-    <li>Vital interests: only in exceptional cases where processing is necessary to protect a person from serious harm. For users in Türkiye, a separate KVKK clarification text may further explain processing activities under Turkish Law No. 6698 on the Protection of Personal Data.</li>
-  </ul>
-</section>
-<section class="section" id="8-third-party-services-we-use">
-  <div class="section-number">08</div>
-  <h2>8. Third-Party Services We Use</h2>
-  <p>We may use the following third-party services to operate, host, secure, analyze, authenticate, notify, diagnose, improve, and monetize the App through subscriptions: Firebase Authentication, Firebase Firestore / Realtime Database, Firebase Analytics, Firebase Crashlytics, Firebase Cloud Messaging, Google Analytics, Google Sign-In, Apple Sign-In, Apple In-App Purchase, and Google Play Billing. The categories of service providers that may process personal information include cloud computing services, data storage providers, analytics services, performance monitoring and crash reporting tools, user account registration and authentication services, push notification providers, and payment/subscription platform providers. These providers may process information on our behalf or as independent service providers according to their own terms and privacy policies. We do not sell personal information. We do not use advertising networks in the App.</p>
-</section>
-<section class="section" id="9-payments-subscriptions-and-free-trial">
-  <div class="section-number">09</div>
-  <h2>9. Payments, Subscriptions, and Free Trial</h2>
-  <p>The App may offer a free version with usage limits, a premium subscription, and a one-week free premium trial. Payments are handled through Apple App Store or Google Play, depending on the user device and purchase method. We may store subscription status, plan type, trial status, purchase verification data, and entitlement information so that we can provide access to premium features. We do not directly collect or store payment card numbers, payment security codes, or full payment instrument details.</p>
-</section>
-<section class="section" id="10-push-notifications">
-  <div class="section-number">10</div>
-  <h2>10. Push Notifications</h2>
-  <p>We may send push notifications, including study reminders, streak reminders, daily goal notifications, account-related messages, and service updates. Users can disable push notifications through device settings or, where available, App settings.</p>
-</section>
-<section class="section" id="11-analytics-cookies-and-tracking-technologies">
-  <div class="section-number">11</div>
-  <h2>11. Analytics, Cookies, and Tracking Technologies</h2>
-  <p>We use analytics and diagnostic tools to understand how users interact with the App, measure performance, improve learning features, detect bugs, monitor crashes, and make the App more useful. This may include behavior analysis such as questions solved, time spent, subject activity, progress patterns, and feature usage.</p>
-  <div class="page-marker">Page 3 · idiomed Privacy Policy</div>
-  <p>We do not collect precise geolocation data. We do not use advertising networks, targeted advertising, or ad-related tracking technologies in the App. We do not use cookies in the App. If our legal information pages are published as static pages without analytics or tracking scripts, we do not use cookies on those pages either. If we later add website analytics, cookies, pixels, or similar technologies to a website, we will update this Policy or provide an appropriate cookie notice where required. We may use Google Analytics or Firebase Analytics for app analytics. Users may be able to manage certain analytics or tracking preferences through device settings, platform controls, or settings offered by the relevant provider.</p>
-</section>
-<section class="section" id="12-social-logins">
-  <div class="section-number">12</div>
-  <h2>12. Social Logins</h2>
-  <p>The App may allow users to register or log in using Google Sign-In or Apple Sign-In. Depending on the provider and user settings, we may receive information such as name, email address, and authentication identifiers. We use this information only to create, authenticate, and manage the user account and provide the App. We do not currently use Facebook, X, or similar social network login features. We do not receive friends lists from social media providers.</p>
-</section>
-<section class="section" id="13-sharing-question-lists-and-custom-decks">
-  <div class="section-number">13</div>
-  <h2>13. Sharing Question Lists and Custom Decks</h2>
-  <p>Users may save questions and create lists from saved questions. Users may share a question list using a list code. If a list or deck is shared, associated content, list metadata, and creator identifiers may be visible or accessible as necessary for the sharing feature to function. Users should not include personal or sensitive information in shared lists, decks, reports, or feedback.</p>
-</section>
-<section class="section" id="14-how-we-share-information">
-  <div class="section-number">14</div>
-  <h2>14. How We Share Information</h2>
-  <p>We may share personal information in the following situations:</p>
-  <ul class="policy-list">
-    <li>Service providers: with vendors and service providers that help us operate, host, analyze, authenticate, notify, diagnose, secure, or improve the App;</li>
-    <li>Apple and Google: for subscriptions, billing, authentication, platform compliance, and purchase verification;</li>
-    <li>Legal and safety reasons: if required by law, regulation, court order, legal process, or lawful request, or where necessary to protect our rights, users, security, or the integrity of the App;</li>
-    <li>Business transfers: in connection with a merger, acquisition, restructuring, financing, sale of assets, or similar transaction, subject to appropriate safeguards. We do not sell personal information. We do not share personal information for targeted advertising. We do not use advertising networks in the App.</li>
-  </ul>
-</section>
-<section class="section" id="15-international-use-and-data-transfers">
-  <div class="section-number">15</div>
-  <h2>15. International Use and Data Transfers</h2>
-  <p>The App is intended for global use. Personal information may be processed and stored in countries other than the user country of residence, including countries where our service providers operate. Data protection laws in those countries may differ from local laws. Where required, we use appropriate legal, technical, and organizational safeguards for international transfers.</p>
-</section>
-<section class="section" id="16-data-retention">
-  <div class="section-number">16</div>
-  <h2>16. Data Retention</h2>
-  <p>We retain personal information for as long as needed to provide the App, maintain user accounts, comply with legal obligations, resolve disputes, enforce agreements, prevent fraud or abuse, and support legitimate business purposes. No purpose in this Policy is intended to require us to keep personal information longer than the period during which the user has an account with us, unless a longer retention period is required or permitted by law, security needs, billing verification, fraud prevention, backup systems, dispute resolution, or compliance obligations. When a user deletes their account, we will delete or anonymize account data and associated app data where reasonably possible, except where retention is required or permitted for legal, security, billing, fraud prevention,</p>
-  <div class="page-marker">Page 4 · idiomed Privacy Policy</div>
-  <p>backup, or compliance reasons. If deletion from backups is not immediately possible, we will isolate the data from ordinary processing until deletion is possible according to our backup retention practices.</p>
-</section>
-<section class="section" id="17-account-deletion-and-user-rights">
-  <div class="section-number">17</div>
-  <h2>17. Account Deletion and User Rights</h2>
-  <p>Users can delete their account through the App where available. Users may also contact us at contact@citrapps.com to request account deletion or assistance. Depending on applicable law and the user location, users may have rights to access, correct, update, delete, restrict, object to, or receive a copy of their personal information. Users may also have the right to withdraw consent where processing is based on consent. We may need to verify identity before responding to requests. Users may review or update certain account information by logging in to their account settings, where available. If a request is denied or limited, we will explain the reason where required by applicable law.</p>
-</section>
-<section class="section" id="18-additional-privacy-rights-for-eea-uk-switzerland-and-canada">
-  <div class="section-number">18</div>
-  <h2>18. Additional Privacy Rights for EEA, UK, Switzerland, and Canada</h2>
-  <p>Users in the European Economic Area, United Kingdom, Switzerland, Canada, or similar jurisdictions may have additional rights under applicable data protection laws, including the right to request access to personal information, rectification, erasure, restriction of processing, data portability, objection to processing, and withdrawal of consent. If a decision that produces legal or similarly significant effects is made solely by automated means, and if applicable law grants this right, users may request information about the main factors involved and may request human review. idiomed does not currently use automated decision-making to make legal or similarly significant decisions about users. Users in the EEA or UK may have the right to lodge a complaint with their local data protection authority. Users in Switzerland may contact the Swiss Federal Data Protection and Information Commissioner. Users in Canada may have rights under applicable federal or provincial privacy laws.</p>
-</section>
-<section class="section" id="19-additional-privacy-rights-for-united-states-residents">
-  <div class="section-number">19</div>
-  <h2>19. Additional Privacy Rights for United States Residents</h2>
-  <p>Depending on the state of residence, US users may have specific privacy rights, including the right to know whether we process personal information, access personal information, correct inaccuracies, request deletion, obtain a copy of personal information, and not be discriminated against for exercising privacy rights. Where applicable, US users may also have the right to opt out of targeted advertising, the sale or sharing of personal information, or certain profiling that produces legal or similarly significant effects. We do not sell personal information and do not share personal information for targeted advertising. Some US state laws may provide additional rights, such as the right to obtain categories of third parties to whom personal information has been disclosed, the right to limit the use or disclosure of sensitive personal information, or the right to appeal a privacy request decision. To exercise rights, users may email contact@citrapps.com. Authorized agents may submit requests where permitted by applicable law, but we may require proof of authorization and may verify the identity of the user before processing the request. If we decline to take action on a request and applicable law provides an appeal right, users may appeal by emailing contact@citrapps.com. If an appeal is denied, users may have the right to contact their state attorney general or other competent authority.</p>
-</section>
-<section class="section" id="20-do-not-track-signals">
-  <div class="section-number">20</div>
-  <h2>20. Do-Not-Track Signals</h2>
-  <p>Some web browsers and mobile operating systems include Do-Not-Track or similar settings. Because there is no uniform technology standard for recognizing and implementing Do-Not-Track signals, we do not currently respond to such signals. If a legally required standard is adopted that applies to us, we will update this Policy accordingly.</p>
-</section>
-<section class="section" id="21-security">
-  <div class="section-number">21</div>
-  <h2>21. Security</h2>
-  <div class="page-marker">Page 5 · idiomed Privacy Policy</div>
-  <p>We use reasonable technical and organizational measures designed to protect personal information, including the security features of Firebase and other service providers. However, no method of transmission or storage is completely secure. We cannot guarantee absolute security. Users should access the App only within a secure environment and should protect their login credentials.</p>
-</section>
-<section class="section" id="22-no-advertising">
-  <div class="section-number">22</div>
-  <h2>22. No Advertising</h2>
-  <p>The App does not show advertisements and does not use advertising networks. We do not sell personal information or share personal information for targeted advertising. If this changes in the future, we will update this Privacy Policy before or when the relevant advertising features are introduced.</p>
-</section>
-<section class="section" id="23-ai-and-user-data">
-  <div class="section-number">23</div>
-  <h2>23. AI and User Data</h2>
-  <p>The App does not currently provide an in-app AI chat or user-facing AI assistant. User data is stored in Firebase and is not intentionally sent to AI model providers for user-facing AI processing. If we introduce user-facing AI features or send user data to AI service providers in the future, we will update this Privacy Policy and, where required, request appropriate consent. This does not prevent us from using AI-assisted methods internally to create or improve educational materials, provided that user personal information is not intentionally submitted to AI model providers for user-facing AI processing unless this Policy is updated and legal requirements are met.</p>
-</section>
-<section class="section" id="24-changes-to-this-privacy-policy">
-  <div class="section-number">24</div>
-  <h2>24. Changes to This Privacy Policy</h2>
-  <p>We may update this Privacy Policy from time to time. The updated version will be indicated by a revised &quot;Last updated&quot; date. Where required by law or where changes are material, we may provide additional notice through the App, email, or other appropriate means. We encourage users to review this Policy periodically.</p>
-</section>
-<section class="section" id="25-contact-us">
-  <div class="section-number">25</div>
-  <h2>25. Contact Us</h2>
-  <p>If you have questions, requests, or concerns about this Privacy Policy or our privacy practices, you may contact us at: Citrapps / idiomed Operator: Barış Kayırtar Email: contact@citrapps.com Location: Mersin, Türkiye</p>
-  <div class="page-marker">Page 6 · idiomed Privacy Policy</div>
-</section>
+        <section class="section" id="1-introduction">
+          <div class="section-header">
+            <div class="section-number">01</div>
+            <h2>1. Introduction</h2>
+          </div>
+          <p>This Privacy Policy explains how Barış Kayırtar, doing business as Citrapps (&quot;Citrapps&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;), collects, uses, stores, shares, and protects personal information when users access or use the idiomed mobile application and related services (the &quot;App&quot; or &quot;Services&quot;). idiomed is a mobile educational platform designed for medical school students. The App may provide study tools such as question banks, flashcards, clinical case-based educational content, progress tracking, personalized study features, usage limits, subscriptions, and related learning features. By using the App, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with this Privacy Policy, please do not use the App.</p>
+        </section>
 
-<section class="section appendix-section" id="appendix-a">
-  <div class="section-kicker">Appendix</div>
-  <h2>Appendix A - Data Categories Summary</h2>
-  <div class="table-wrap">
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th>Category</th>
-          <th>Examples</th>
-          <th>Collected</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Identifiers</td>
-          <td>Email address, username, authentication identifiers, user ID, login identifiers, IP address where collected by service providers.</td>
-          <td><span class="status yes">Yes</span></td>
-        </tr>
-        <tr>
-          <td>Profile and education-related data</td>
-          <td>Full name, school, class year, country, city, clinical level, optional birth date, exam date, learning preferences.</td>
-          <td><span class="status yes">Yes</span></td>
-        </tr>
-        <tr>
-          <td>Learning and usage data</td>
-          <td>Study sessions, quiz activity, flashcard activity, streaks, goals, subject statistics, saved content, incorrect questions, shared list activity.</td>
-          <td><span class="status yes">Yes</span></td>
-        </tr>
-        <tr>
-          <td>Purchase and subscription data</td>
-          <td>Subscription type, free/premium status, trial status, purchase verification and entitlement data; not full card details.</td>
-          <td><span class="status yes">Yes</span></td>
-        </tr>
-        <tr>
-          <td>Diagnostics and device data</td>
-          <td>Crash logs, error logs, device/app information, performance data, analytics identifiers, mobile OS/app version.</td>
-          <td><span class="status yes">Yes</span></td>
-        </tr>
-        <tr>
-          <td>Notifications</td>
-          <td>Push notification token and notification preferences where available.</td>
-          <td><span class="status yes">Yes</span></td>
-        </tr>
-        <tr>
-          <td>Feedback and reports</td>
-          <td>Report text, complaint content, question IDs, user ID, and related metadata.</td>
-          <td><span class="status yes">Yes</span></td>
-        </tr>
-        <tr>
-          <td>Precise geolocation</td>
-          <td>Precise GPS location.</td>
-          <td><span class="status no">No</span></td>
-        </tr>
-        <tr>
-          <td>Advertising data</td>
-          <td>Ad network identifiers or targeted advertising profiles.</td>
-          <td><span class="status no">No</span></td>
-        </tr>
-        <tr>
-          <td>Patient or health records</td>
-          <td>Protected health information, patient records, real clinical case files.</td>
-          <td><span class="status no">No, not intentionally</span></td>
-        </tr>
-        <tr>
-          <td>Biometric data</td>
-          <td>Fingerprints, faceprints, voiceprints.</td>
-          <td><span class="status no">No</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="page-marker">Page 7 · idiomed Privacy Policy</div>
-</section>
+        <section class="section" id="2-educational-and-medical-disclaimer">
+          <div class="section-header">
+            <div class="section-number">02</div>
+            <h2>2. Educational and Medical Disclaimer</h2>
+          </div>
+          <p>The App is provided for educational purposes only. It does not provide medical advice, diagnosis, treatment, clinical decision support, or professional healthcare services. Content in the App may include AI-generated or AI-assisted educational materials. Although we aim to provide accurate and useful educational content, errors, omissions, outdated information, or inaccuracies may occur. Users should verify medical information using official textbooks, academic resources, clinical guidelines, instructors, or licensed healthcare professionals. The App must not be used for patient care, diagnosis, treatment decisions, emergency situations, or any real-world clinical decision-making.</p>
+        </section>
+
+        <section class="section" id="3-who-can-use-the-app">
+          <div class="section-header">
+            <div class="section-number">03</div>
+            <h2>3. Who Can Use the App</h2>
+          </div>
+          <p>The App is intended for users who are at least 18 years old. The App is not directed to children or minors. We do not knowingly collect, solicit, or market to users under 18 years of age or the equivalent age specified by applicable law in the user jurisdiction. If we become aware that we have collected personal information from a child or minor contrary to this Policy, we will take reasonable steps to deactivate the account and delete such information, unless retention is required by applicable law.</p>
+        </section>
+
+        <section class="section" id="4-information-we-collect">
+          <div class="section-header">
+            <div class="section-number">04</div>
+            <h2>4. Information We Collect</h2>
+          </div>
+          <p>We collect information that users provide directly, information generated through use of the App, information received through login or payment platforms, and technical information collected automatically through our service providers. Account and identity information: email address; full name; username; account creation date; contact preferences; login method, including email/password, Google Sign-In, or Apple Sign-In; and authentication identifiers managed by Firebase Authentication. Profile, education, and personalization information: school, class year, country, city, clinical level, optional birth date, theme preference such as dark mode, exam date, study goal, study style, hard topics, strong and weak subjects, study hours, study time, target percentile, anxiety-related survey answers, TUS date, TUS attempt information, motivation, weak-action preference, study tools used, persona type, and related personalization fields. Activity and learning analytics: login count, last login, streak, total questions solved, correct answers, lifetime quiz count, daily question/card usage and limits, daily goals, total study minutes, subject statistics, subject totals, last studied subject, subject study count, daily statistics such as solved questions, correct answers and study minutes, badges, study sessions, saved questions, saved flashcards, incorrect questions, custom decks, list codes for shared question lists, and report or feedback submissions.</p>
+          <span class="page-marker">Page 1 · idiomed Privacy Policy</span>
+          <p>Subscription and purchase information: subscription type, premium/free status, trial status, purchase or entitlement status, and information needed to verify App Store or Google Play subscription access. We do not directly collect or store payment card numbers, security codes, or full payment instrument details. Payments are processed by Apple App Store or Google Play. Technical, device, and diagnostic information: device and app information, mobile operating system, app version, device identifiers or app instance identifiers where available, IP address or proxy server information, language preferences, mobile carrier or network information, app usage events, crash logs, error logs, performance data, analytics identifiers, push notification tokens, and related technical data collected through Firebase, Google Analytics, and similar services. Feedback and reports: if you submit feedback, report a question, or send a complaint, we may collect the content of your message, related question identifiers, your user ID, and associated metadata needed to review and respond. Google API information: if you use Google Sign-In or other Google-related login features, we may receive limited account information such as your name, email address, and authentication identifiers, depending on your Google account settings and permissions. Our use of information received from Google APIs will comply with the Google API Services User Data Policy, including applicable Limited Use requirements.</p>
+        </section>
+
+        <section class="section" id="5-sensitive-information-and-information-you-should-not-submit">
+          <div class="section-header">
+            <div class="section-number">05</div>
+            <h2>5. Sensitive Information and Information You Should Not Submit</h2>
+          </div>
+          <p>The App is designed for medical education and study tracking. It is not designed to collect patient records, protected health information, real clinical case files, biometric data, or real-world clinical care information. Users cannot upload their own patient files or clinical case files through the App. However, users may be able to send feedback, reports, support messages, shared lists, or similar content. You must not submit patient information, protected health information, medical records, real clinical case details, sensitive personal data, or any information that identifies another person. We may collect education-related profile information, survey responses, and learning analytics. Some jurisdictions may treat certain account, education, login, demographic, or inference data as sensitive. We process such information only as described in this Policy, where necessary to provide and improve the App, where you choose to provide it, or where otherwise permitted by applicable law. We do not intentionally collect health records or patient information. If prohibited sensitive information is submitted accidentally, we may delete it, restrict access to it, or take other reasonable steps where possible.</p>
+        </section>
+
+        <section class="section" id="6-how-we-use-information">
+          <div class="section-header">
+            <div class="section-number">06</div>
+            <h2>6. How We Use Information</h2>
+          </div>
+          <p>We use personal information for the following purposes:</p>
+          <ul class="policy-list">
+            <li>to create, authenticate, secure, and manage user accounts;</li>
+            <li>to provide App features such as quizzes, flashcards, saved questions, saved flashcards, custom decks, shared list codes, study tracking, and progress review;</li>
+            <li>to personalize the learning experience based on profile, survey, performance, and study data;</li>
+            <li>to track study progress, learning history, subject activity, streaks, goals, badges, and performance statistics;</li>
+            <li>to manage free plans, usage limits, premium subscriptions, trial access, purchase verification, and entitlement status;</li>
+            <li>to send push notifications such as study reminders, streak reminders, daily goals, account messages, and service updates;</li>
+            <li>to analyze usage trends, improve learning recommendations, detect errors, troubleshoot crashes, maintain reliability, and develop new features;</li>
+            <li>to respond to feedback, reports, complaints, and support requests;</li>
+            <li>to maintain account security, prevent misuse, apply fair usage limits, detect suspicious activity, and protect the integrity of the App;</li>
+          </ul>
+          <span class="page-marker">Page 2 · idiomed Privacy Policy</span>
+          <ul class="policy-list">
+            <li>to comply with legal obligations, enforce our terms and policies, and establish, exercise, or defend legal claims.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="7-legal-bases-for-processing">
+          <div class="section-header">
+            <div class="section-number">07</div>
+            <h2>7. Legal Bases for Processing</h2>
+          </div>
+          <p>Where applicable law requires a legal basis for processing personal information, including for users in the European Economic Area, United Kingdom, Switzerland, or similar jurisdictions, we rely on one or more of the following legal bases:</p>
+          <ul class="policy-list">
+            <li>Performance of a contract: to create accounts, provide the App, manage subscriptions, apply usage limits, and deliver requested features;</li>
+            <li>Legitimate interests: to improve the App, maintain security, prevent abuse, analyze usage trends, troubleshoot technical issues, and develop better educational features, provided those interests are not overridden by user rights and interests;</li>
+            <li>Consent: where required for specific features, optional profile information, certain notifications, analytics choices, or other processing that requires consent;</li>
+            <li>Legal obligations: to comply with applicable laws, court orders, platform rules, tax/accounting requirements, and lawful requests;</li>
+            <li>Legal claims: to establish, exercise, or defend legal claims;</li>
+            <li>Vital interests: only in exceptional cases where processing is necessary to protect a person from serious harm. For users in Türkiye, a separate KVKK clarification text may further explain processing activities under Turkish Law No. 6698 on the Protection of Personal Data.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="8-third-party-services-we-use">
+          <div class="section-header">
+            <div class="section-number">08</div>
+            <h2>8. Third-Party Services We Use</h2>
+          </div>
+          <p>We may use the following third-party services to operate, host, secure, analyze, authenticate, notify, diagnose, improve, and monetize the App through subscriptions: Firebase Authentication, Firebase Firestore / Realtime Database, Firebase Analytics, Firebase Crashlytics, Firebase Cloud Messaging, Google Analytics, Google Sign-In, Apple Sign-In, Apple In-App Purchase, and Google Play Billing. The categories of service providers that may process personal information include cloud computing services, data storage providers, analytics services, performance monitoring and crash reporting tools, user account registration and authentication services, push notification providers, and payment/subscription platform providers. These providers may process information on our behalf or as independent service providers according to their own terms and privacy policies. We do not sell personal information. We do not use advertising networks in the App.</p>
+        </section>
+
+        <section class="section" id="9-payments-subscriptions-and-free-trial">
+          <div class="section-header">
+            <div class="section-number">09</div>
+            <h2>9. Payments, Subscriptions, and Free Trial</h2>
+          </div>
+          <p>The App may offer a free version with usage limits, a premium subscription, and a one-week free premium trial. Payments are handled through Apple App Store or Google Play, depending on the user device and purchase method. We may store subscription status, plan type, trial status, purchase verification data, and entitlement information so that we can provide access to premium features. We do not directly collect or store payment card numbers, payment security codes, or full payment instrument details.</p>
+        </section>
+
+        <section class="section" id="10-push-notifications">
+          <div class="section-header">
+            <div class="section-number">10</div>
+            <h2>10. Push Notifications</h2>
+          </div>
+          <p>We may send push notifications, including study reminders, streak reminders, daily goal notifications, account-related messages, and service updates. Users can disable push notifications through device settings or, where available, App settings.</p>
+        </section>
+
+        <section class="section" id="11-analytics-cookies-and-tracking-technologies">
+          <div class="section-header">
+            <div class="section-number">11</div>
+            <h2>11. Analytics, Cookies, and Tracking Technologies</h2>
+          </div>
+          <p>We use analytics and diagnostic tools to understand how users interact with the App, measure performance, improve learning features, detect bugs, monitor crashes, and make the App more useful. This may include behavior analysis such as questions solved, time spent, subject activity, progress patterns, and feature usage.</p>
+          <span class="page-marker">Page 3 · idiomed Privacy Policy</span>
+          <p>We do not collect precise geolocation data. We do not use advertising networks, targeted advertising, or ad-related tracking technologies in the App. We do not use cookies in the App. If our legal information pages are published as static pages without analytics or tracking scripts, we do not use cookies on those pages either. If we later add website analytics, cookies, pixels, or similar technologies to a website, we will update this Policy or provide an appropriate cookie notice where required. We may use Google Analytics or Firebase Analytics for app analytics. Users may be able to manage certain analytics or tracking preferences through device settings, platform controls, or settings offered by the relevant provider.</p>
+        </section>
+
+        <section class="section" id="12-social-logins">
+          <div class="section-header">
+            <div class="section-number">12</div>
+            <h2>12. Social Logins</h2>
+          </div>
+          <p>The App may allow users to register or log in using Google Sign-In or Apple Sign-In. Depending on the provider and user settings, we may receive information such as name, email address, and authentication identifiers. We use this information only to create, authenticate, and manage the user account and provide the App. We do not currently use Facebook, X, or similar social network login features. We do not receive friends lists from social media providers.</p>
+        </section>
+
+        <section class="section" id="13-sharing-question-lists-and-custom-decks">
+          <div class="section-header">
+            <div class="section-number">13</div>
+            <h2>13. Sharing Question Lists and Custom Decks</h2>
+          </div>
+          <p>Users may save questions and create lists from saved questions. Users may share a question list using a list code. If a list or deck is shared, associated content, list metadata, and creator identifiers may be visible or accessible as necessary for the sharing feature to function. Users should not include personal or sensitive information in shared lists, decks, reports, or feedback.</p>
+        </section>
+
+        <section class="section" id="14-how-we-share-information">
+          <div class="section-header">
+            <div class="section-number">14</div>
+            <h2>14. How We Share Information</h2>
+          </div>
+          <p>We may share personal information in the following situations:</p>
+          <ul class="policy-list">
+            <li>Service providers: with vendors and service providers that help us operate, host, analyze, authenticate, notify, diagnose, secure, or improve the App;</li>
+            <li>Apple and Google: for subscriptions, billing, authentication, platform compliance, and purchase verification;</li>
+            <li>Legal and safety reasons: if required by law, regulation, court order, legal process, or lawful request, or where necessary to protect our rights, users, security, or the integrity of the App;</li>
+            <li>Business transfers: in connection with a merger, acquisition, restructuring, financing, sale of assets, or similar transaction, subject to appropriate safeguards. We do not sell personal information. We do not share personal information for targeted advertising. We do not use advertising networks in the App.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="15-international-use-and-data-transfers">
+          <div class="section-header">
+            <div class="section-number">15</div>
+            <h2>15. International Use and Data Transfers</h2>
+          </div>
+          <p>The App is intended for global use. Personal information may be processed and stored in countries other than the user country of residence, including countries where our service providers operate. Data protection laws in those countries may differ from local laws. Where required, we use appropriate legal, technical, and organizational safeguards for international transfers.</p>
+        </section>
+
+        <section class="section" id="16-data-retention">
+          <div class="section-header">
+            <div class="section-number">16</div>
+            <h2>16. Data Retention</h2>
+          </div>
+          <p>We retain personal information for as long as needed to provide the App, maintain user accounts, comply with legal obligations, resolve disputes, enforce agreements, prevent fraud or abuse, and support legitimate business purposes. No purpose in this Policy is intended to require us to keep personal information longer than the period during which the user has an account with us, unless a longer retention period is required or permitted by law, security needs, billing verification, fraud prevention, backup systems, dispute resolution, or compliance obligations. When a user deletes their account, we will delete or anonymize account data and associated app data where reasonably possible, except where retention is required or permitted for legal, security, billing, fraud prevention,</p>
+          <span class="page-marker">Page 4 · idiomed Privacy Policy</span>
+          <p>backup, or compliance reasons. If deletion from backups is not immediately possible, we will isolate the data from ordinary processing until deletion is possible according to our backup retention practices.</p>
+        </section>
+
+        <section class="section" id="17-account-deletion-and-user-rights">
+          <div class="section-header">
+            <div class="section-number">17</div>
+            <h2>17. Account Deletion and User Rights</h2>
+          </div>
+          <p>Users can delete their account through the App where available. Users may also contact us at contact@citrapps.com to request account deletion or assistance. Depending on applicable law and the user location, users may have rights to access, correct, update, delete, restrict, object to, or receive a copy of their personal information. Users may also have the right to withdraw consent where processing is based on consent. We may need to verify identity before responding to requests. Users may review or update certain account information by logging in to their account settings, where available. If a request is denied or limited, we will explain the reason where required by applicable law.</p>
+        </section>
+
+        <section class="section" id="18-additional-privacy-rights-for-eea-uk-switzerland-and-canada">
+          <div class="section-header">
+            <div class="section-number">18</div>
+            <h2>18. Additional Privacy Rights for EEA, UK, Switzerland, and Canada</h2>
+          </div>
+          <p>Users in the European Economic Area, United Kingdom, Switzerland, Canada, or similar jurisdictions may have additional rights under applicable data protection laws, including the right to request access to personal information, rectification, erasure, restriction of processing, data portability, objection to processing, and withdrawal of consent. If a decision that produces legal or similarly significant effects is made solely by automated means, and if applicable law grants this right, users may request information about the main factors involved and may request human review. idiomed does not currently use automated decision-making to make legal or similarly significant decisions about users. Users in the EEA or UK may have the right to lodge a complaint with their local data protection authority. Users in Switzerland may contact the Swiss Federal Data Protection and Information Commissioner. Users in Canada may have rights under applicable federal or provincial privacy laws.</p>
+        </section>
+
+        <section class="section" id="19-additional-privacy-rights-for-united-states-residents">
+          <div class="section-header">
+            <div class="section-number">19</div>
+            <h2>19. Additional Privacy Rights for United States Residents</h2>
+          </div>
+          <p>Depending on the state of residence, US users may have specific privacy rights, including the right to know whether we process personal information, access personal information, correct inaccuracies, request deletion, obtain a copy of personal information, and not be discriminated against for exercising privacy rights. Where applicable, US users may also have the right to opt out of targeted advertising, the sale or sharing of personal information, or certain profiling that produces legal or similarly significant effects. We do not sell personal information and do not share personal information for targeted advertising. Some US state laws may provide additional rights, such as the right to obtain categories of third parties to whom personal information has been disclosed, the right to limit the use or disclosure of sensitive personal information, or the right to appeal a privacy request decision. To exercise rights, users may email contact@citrapps.com. Authorized agents may submit requests where permitted by applicable law, but we may require proof of authorization and may verify the identity of the user before processing the request. If we decline to take action on a request and applicable law provides an appeal right, users may appeal by emailing contact@citrapps.com. If an appeal is denied, users may have the right to contact their state attorney general or other competent authority.</p>
+        </section>
+
+        <section class="section" id="20-do-not-track-signals">
+          <div class="section-header">
+            <div class="section-number">20</div>
+            <h2>20. Do-Not-Track Signals</h2>
+          </div>
+          <p>Some web browsers and mobile operating systems include Do-Not-Track or similar settings. Because there is no uniform technology standard for recognizing and implementing Do-Not-Track signals, we do not currently respond to such signals. If a legally required standard is adopted that applies to us, we will update this Policy accordingly.</p>
+        </section>
+
+        <section class="section" id="21-security">
+          <div class="section-header">
+            <div class="section-number">21</div>
+            <h2>21. Security</h2>
+          </div>
+          <span class="page-marker">Page 5 · idiomed Privacy Policy</span>
+          <p>We use reasonable technical and organizational measures designed to protect personal information, including the security features of Firebase and other service providers. However, no method of transmission or storage is completely secure. We cannot guarantee absolute security. Users should access the App only within a secure environment and should protect their login credentials.</p>
+        </section>
+
+        <section class="section" id="22-no-advertising">
+          <div class="section-header">
+            <div class="section-number">22</div>
+            <h2>22. No Advertising</h2>
+          </div>
+          <p>The App does not show advertisements and does not use advertising networks. We do not sell personal information or share personal information for targeted advertising. If this changes in the future, we will update this Privacy Policy before or when the relevant advertising features are introduced.</p>
+        </section>
+
+        <section class="section" id="23-ai-and-user-data">
+          <div class="section-header">
+            <div class="section-number">23</div>
+            <h2>23. AI and User Data</h2>
+          </div>
+          <p>The App does not currently provide an in-app AI chat or user-facing AI assistant. User data is stored in Firebase and is not intentionally sent to AI model providers for user-facing AI processing. If we introduce user-facing AI features or send user data to AI service providers in the future, we will update this Privacy Policy and, where required, request appropriate consent. This does not prevent us from using AI-assisted methods internally to create or improve educational materials, provided that user personal information is not intentionally submitted to AI model providers for user-facing AI processing unless this Policy is updated and legal requirements are met.</p>
+        </section>
+
+        <section class="section" id="24-changes-to-this-privacy-policy">
+          <div class="section-header">
+            <div class="section-number">24</div>
+            <h2>24. Changes to This Privacy Policy</h2>
+          </div>
+          <p>We may update this Privacy Policy from time to time. The updated version will be indicated by a revised &quot;Last updated&quot; date. Where required by law or where changes are material, we may provide additional notice through the App, email, or other appropriate means. We encourage users to review this Policy periodically.</p>
+        </section>
+
+        <section class="section" id="25-contact-us">
+          <div class="section-header">
+            <div class="section-number">25</div>
+            <h2>25. Contact Us</h2>
+          </div>
+          <p>If you have questions, requests, or concerns about this Privacy Policy or our privacy practices, you may contact us at: Citrapps / idiomed Operator: Barış Kayırtar Email: contact@citrapps.com Location: Mersin, Türkiye</p>
+          <span class="page-marker">Page 6 · idiomed Privacy Policy</span>
+        </section>
+
+        <section class="section" id="appendix-a">
+          <div class="section-header">
+            <div class="section-number">A</div>
+            <h2>Appendix A - Data Categories Summary</h2>
+          </div>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Examples</th>
+                  <th>Collected</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Identifiers</td>
+                  <td>Email address, username, authentication identifiers, user ID, login identifiers, IP address where collected by service providers.</td>
+                  <td><span class="status">Yes</span></td>
+                </tr>
+                <tr>
+                  <td>Profile and education-related data</td>
+                  <td>Full name, school, class year, country, city, clinical level, optional birth date, exam date, learning preferences.</td>
+                  <td><span class="status">Yes</span></td>
+                </tr>
+                <tr>
+                  <td>Learning and usage data</td>
+                  <td>Study sessions, quiz activity, flashcard activity, streaks, goals, subject statistics, saved content, incorrect questions, shared list activity.</td>
+                  <td><span class="status">Yes</span></td>
+                </tr>
+                <tr>
+                  <td>Purchase and subscription data</td>
+                  <td>Subscription type, free/premium status, trial status, purchase verification and entitlement data; not full card details.</td>
+                  <td><span class="status">Yes</span></td>
+                </tr>
+                <tr>
+                  <td>Diagnostics and device data</td>
+                  <td>Crash logs, error logs, device/app information, performance data, analytics identifiers, mobile OS/app version.</td>
+                  <td><span class="status">Yes</span></td>
+                </tr>
+                <tr>
+                  <td>Notifications</td>
+                  <td>Push notification token and notification preferences where available.</td>
+                  <td><span class="status">Yes</span></td>
+                </tr>
+                <tr>
+                  <td>Feedback and reports</td>
+                  <td>Report text, complaint content, question IDs, user ID, and related metadata.</td>
+                  <td><span class="status">Yes</span></td>
+                </tr>
+                <tr>
+                  <td>Precise geolocation</td>
+                  <td>Precise GPS location.</td>
+                  <td><span class="status">No</span></td>
+                </tr>
+                <tr>
+                  <td>Advertising data</td>
+                  <td>Ad network identifiers or targeted advertising profiles.</td>
+                  <td><span class="status">No</span></td>
+                </tr>
+                <tr>
+                  <td>Patient or health records</td>
+                  <td>Protected health information, patient records, real clinical case files.</td>
+                  <td><span class="status">No, not intentionally</span></td>
+                </tr>
+                <tr>
+                  <td>Biometric data</td>
+                  <td>Fingerprints, faceprints, voiceprints.</td>
+                  <td><span class="status">No</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <span class="page-marker">Page 7 · idiomed Privacy Policy</span>
+        </section>
       </article>
     </div>
-
-    <p class="footer-note">© 2026 Citrapps. All rights reserved.</p>
   </main>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <strong>Citrapps Legal Center</strong><br />
+      © 2026 Citrapps. All rights reserved.<br />
+      <a href="mailto:contact@citrapps.com">contact@citrapps.com</a>
+
+      <div class="footer-names">
+        Barış Kayırtar<br />
+        Gürkan Toker
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://legal.citrapps.com/">Legal Center</a>
+      <a href="terms.html">Terms</a>
+      <a href="kvkk.html">KVKK</a>
+      <a href="eula.html">EULA</a>
+    </div>
+  </footer>
 </body>
 </html>
