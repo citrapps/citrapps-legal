@@ -144,10 +144,10 @@
     }
 
     .section-head {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
       align-items: end;
-      gap: 24px;
       margin-bottom: 30px;
     }
 
@@ -166,25 +166,17 @@
     }
 
     .section-note {
-      max-width: 440px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .product-box {
-      border: 1px solid var(--border);
-      background: transparent;
-      padding: 30px;
-      margin-bottom: 30px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-
-    .product-box p {
-      margin: 0;
       color: var(--muted);
       font-size: 16px;
+      max-width: 520px;
+    }
+
+    .section-note p {
+      margin: 0 0 14px;
+    }
+
+    .section-note p:last-child {
+      margin-bottom: 0;
     }
 
     .documents {
@@ -280,6 +272,11 @@
       color: var(--text);
     }
 
+    .footer-names {
+      margin-top: 8px;
+      color: var(--muted);
+    }
+
     .footer-links {
       display: flex;
       flex-wrap: wrap;
@@ -297,12 +294,7 @@
         align-items: flex-start;
       }
 
-      .section-head {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .product-box,
+      .section-head,
       .simple-box {
         grid-template-columns: 1fr;
       }
@@ -388,25 +380,20 @@
       <div class="section-head">
         <div>
           <div class="section-label">Product Documents</div>
-          <h2>idiomed Legal Documents</h2>
-        </div>
-
-        <div class="section-note">
-          These are the official legal documents for the idiomed mobile
-          application, a medical education app developed by Citrapps.
-        </div>
-      </div>
-
-      <div class="product-box">
-        <div>
           <h2>For idiomed users.</h2>
         </div>
 
-        <p>
-          These documents explain the privacy, terms, data protection, and
-          license conditions that apply specifically to the idiomed mobile
-          application.
-        </p>
+        <div class="section-note">
+          <p>
+            These are the official legal documents for the idiomed mobile
+            application, a medical education app developed by Citrapps.
+          </p>
+
+          <p>
+            They explain the privacy, terms, data protection, and license
+            conditions that apply specifically to idiomed.
+          </p>
+        </div>
       </div>
 
       <div class="documents" aria-label="idiomed legal documents">
@@ -491,6 +478,11 @@
       <strong>Citrapps Legal Center</strong><br />
       © 2026 Citrapps. All rights reserved.<br />
       <a href="mailto:contact@citrapps.com">contact@citrapps.com</a>
+
+      <div class="footer-names">
+        Barış Kayırtar<br />
+        Gürkan Toker
+      </div>
     </div>
 
     <div class="footer-links">
