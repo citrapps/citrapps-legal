@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KVKK Aydınlatma Metni | Citrapps</title>
+
+  <title>KVKK Aydınlatma Metni | idiomed</title>
+  <meta name="description" content="KVKK Aydınlatma Metni for the idiomed mobile application by Citrapps." />
+
   <style>
     :root {
-      --bg: #f6f7fb;
-      --paper: #ffffff;
-      --text: #15171c;
-      --muted: #667085;
-      --border: #e6e8ef;
-      --soft: #f2f4f8;
-      --accent: #ff7a1a;
-      --accent-soft: #fff1e6;
-      --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      --bg: #f4f1eb;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666666;
+      --border: #d8d3c9;
+      --accent: #223a63;
+      --max-width: 1120px;
     }
 
     * {
@@ -27,544 +28,827 @@
 
     body {
       margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
       color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(255, 122, 26, 0.10), transparent 32rem),
-        linear-gradient(180deg, #fbfcff 0%, var(--bg) 100%);
-      line-height: 1.75;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.62;
     }
 
-    .site-shell {
-      width: min(980px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 32px 0 64px;
-    }
-
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--text);
+    a {
+      color: inherit;
       text-decoration: none;
-      font-weight: 700;
-      background: rgba(255, 255, 255, 0.80);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 10px 14px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
     }
 
-    .brand-pill {
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 22px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
       color: var(--muted);
       font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
+    }
+
+    .brand:hover,
+    .nav a:hover {
+      color: var(--accent);
+    }
+
+    .main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 72px 24px 40px;
     }
 
     .hero {
-      background: linear-gradient(135deg, #ffffff 0%, #fff8f2 100%);
+      padding: 8px 0 56px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero h1 {
+      margin: 0;
+      max-width: 860px;
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -0.07em;
+      font-weight: 750;
+    }
+
+    .hero p {
+      margin: 26px 0 0;
+      max-width: 740px;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .meta-box {
       border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: clamp(28px, 5vw, 48px);
-      margin-bottom: 22px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
+      background: transparent;
+      padding: 12px 14px;
+      min-width: 190px;
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 220px;
-      height: 220px;
-      right: -80px;
-      top: -90px;
-      background: rgba(255, 122, 26, 0.12);
-      border-radius: 999px;
+    .meta-label {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 4px;
     }
 
-    .kicker {
+    .meta-value {
+      display: block;
+      color: var(--text);
+      font-weight: 650;
+      font-size: 14px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 14px;
-      color: #9a4a0d;
-      background: var(--accent-soft);
-      border: 1px solid #ffd9b8;
-      border-radius: 999px;
-      padding: 6px 12px;
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--text);
+      background: var(--text);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
     }
 
-    h1 {
-      position: relative;
-      z-index: 1;
-      margin: 0;
-      max-width: 760px;
-      font-size: clamp(30px, 5vw, 48px);
-      line-height: 1.08;
-      letter-spacing: -0.045em;
+    .button.secondary {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
     }
 
-    .date-line {
-      position: relative;
-      z-index: 1;
-      margin: 18px 0 0;
-      color: var(--muted);
+    .button:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+
+    .button.secondary:hover {
+      background: var(--surface);
+      border-color: var(--text);
+      color: var(--text);
+    }
+
+    .content-layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 28px;
+      padding-top: 56px;
+    }
+
+    .toc {
+      position: sticky;
+      top: 20px;
+      align-self: start;
+      border: 1px solid var(--border);
+      background: transparent;
+      padding: 22px;
+      max-height: calc(100vh - 40px);
+      overflow: auto;
+    }
+
+    .toc-title {
+      margin: 0 0 16px;
+      color: var(--text);
       font-size: 15px;
       font-weight: 700;
-      background: rgba(255, 255, 255, 0.70);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 12px 14px;
-      display: inline-block;
     }
 
-    .legal-card {
-      background: var(--paper);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: clamp(22px, 4vw, 44px);
-      box-shadow: var(--shadow);
-    }
-
-    .legal-content {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-
-    .legal-content h2 {
-      margin: 34px 0 12px;
-      padding-top: 22px;
-      border-top: 1px solid var(--border);
-      color: #111827;
-      font-size: clamp(21px, 3vw, 28px);
-      line-height: 1.25;
-      letter-spacing: -0.025em;
-    }
-
-    .legal-content h2:first-child {
-      margin-top: 0;
-      padding-top: 0;
-      border-top: 0;
-    }
-
-    .legal-content h3 {
-      margin: 22px 0 8px;
-      color: #1f2937;
-      font-size: 18px;
+    .toc a {
+      display: block;
+      padding: 8px 0;
+      color: var(--muted);
+      font-size: 13px;
       line-height: 1.35;
+      border-top: 1px solid var(--border);
     }
 
-    .legal-content p {
-      margin: 0.48rem 0;
-      font-size: 15.8px;
+    .toc a:hover {
+      color: var(--accent);
     }
 
-    .bullet-line {
-      position: relative;
-      padding: 10px 12px 10px 18px;
-      margin: 8px 0 !important;
-      background: #fafbff;
+    .document {
+      min-width: 0;
+    }
+
+    .section {
       border: 1px solid var(--border);
-      border-left: 4px solid var(--accent);
-      border-radius: 14px;
-      color: #252b37;
+      background: var(--surface);
+      padding: 30px;
+      margin-bottom: 18px;
     }
 
-    .table-label,
-    .field-label,
-    .email-line {
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-number {
+      flex: 0 0 auto;
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--border);
       display: inline-flex;
-      width: fit-content;
-      max-width: 100%;
-      margin: 6px 8px 6px 0 !important;
-      padding: 7px 11px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: var(--soft);
-      font-size: 14px !important;
-      font-weight: 800;
-      color: #384152;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
     }
 
-    .email-line {
-      color: #9a4a0d;
-      background: var(--accent-soft);
-      border-color: #ffd9b8;
-      font-weight: 800;
+    h2 {
+      margin: 0;
+      color: var(--text);
+      font-size: 25px;
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .policy-list {
+      margin: 8px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 15.5px;
+    }
+
+    .policy-list li {
+      margin-bottom: 10px;
     }
 
     .page-marker {
-      margin: 30px 0 8px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: #f2f4f8;
+      display: inline-block;
+      margin: 6px 0 16px;
+      padding: 5px 8px;
       border: 1px solid var(--border);
       color: var(--muted);
       font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
+      background: transparent;
     }
 
-    .running-header {
-      margin: 0 0 18px;
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      border: 1px solid var(--border);
+      font-size: 15px;
+    }
+
+    .info-table th,
+    .info-table td {
+      text-align: left;
+      vertical-align: top;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
       color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
     }
 
-    .footer-note {
-      margin-top: 30px;
+    .info-table th {
+      width: 34%;
+      color: var(--text);
+      font-weight: 650;
+      background: #f8f6f1;
+    }
+
+    .info-table tr:last-child th,
+    .info-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
       color: var(--muted);
-      font-size: 13px;
-      text-align: center;
+      font-size: 14px;
     }
 
-    @media (max-width: 640px) {
-      .site-shell {
-        width: min(100% - 20px, 980px);
-        padding-top: 18px;
+    .footer-left strong {
+      color: var(--text);
+    }
+
+    .footer-names {
+      margin-top: 8px;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .footer a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 900px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .topbar {
-        align-items: flex-start;
+      .content-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: static;
+        max-height: none;
+      }
+
+      .footer {
         flex-direction: column;
       }
 
-      .hero,
-      .legal-card {
-        border-radius: 20px;
-      }
-
-      .legal-content p {
-        font-size: 15px;
+      .footer-links {
+        justify-content: flex-start;
       }
     }
 
-    @media print {
-      body {
-        background: #ffffff;
-      }
-
-      .site-shell {
-        width: 100%;
-        padding: 0;
-      }
-
-      .topbar {
-        display: none;
-      }
-
-      .hero,
-      .legal-card {
-        box-shadow: none;
-        border: none;
-        border-radius: 0;
+    @media (max-width: 560px) {
+      .main,
+      .header-inner,
+      .footer {
+        padding-left: 18px;
+        padding-right: 18px;
       }
 
       .hero {
-        padding: 0 0 18px;
-        background: #ffffff;
+        padding-bottom: 48px;
       }
 
-      .legal-card {
-        padding: 0;
+      .hero h1 {
+        font-size: 46px;
       }
 
-      .page-marker {
-        break-before: auto;
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .section {
+        padding: 22px;
+      }
+
+      .section-header {
+        flex-direction: column;
+      }
+
+      .info-table th,
+      .info-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .info-table th {
+        border-bottom: none;
+        padding-bottom: 4px;
+      }
+
+      .info-table td {
+        padding-top: 4px;
       }
     }
   </style>
 </head>
+
 <body>
-  <main class="site-shell">
-    <nav class="topbar" aria-label="Legal navigation">
-      <a class="back-link" href="index.html">← Legal Documents</a>
-      <span class="brand-pill">Citrapps / idiomed</span>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="https://citrapps.com/">Citrapps</a>
 
-    <header class="hero">
-      <div class="kicker">KVKK</div>
-      <h1>idiomed Mobil Uygulaması KVKK Aydınlatma Metni</h1>
-      <div class="date-line">Yürürlük Tarihi: 26 Nisan 2026   |   Son Güncelleme: 26 Nisan 2026</div>
-    </header>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="https://legal.citrapps.com/">Legal Center</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="eula.html">EULA</a>
+        <a href="mailto:contact@citrapps.com">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <article class="legal-card">
-      <div class="legal-content">
-        <p>Bu KVKK Aydınlatma Metni, idiomed mobil uygulamasını ve ilgili hizmetleri kullanan kişilerin kişisel verilerinin 6698 sayılı</p>
-        <p>Kişisel Verilerin Korunması Kanunu kapsamında nasıl işlendiğini açıklamak amacıyla hazırlanmıştır. Bu metin bir açık rıza</p>
-        <p>metni değildir; yalnızca aydınlatma amacı taşır. Açık rıza gerektiren bir işleme faaliyeti bulunması halinde, ilgili açık rıza</p>
-        <p>ayrıca ve ayrı bir metin veya mekanizma üzerinden talep edilir.</p>
-        <p>idiomed; tıp fakültesi öğrencileri ve benzer kullanıcılar için hazırlanmış, soru bankası, flashcard, klinik vaka temelli eğitim</p>
-        <p>içerikleri, çalışma takibi, kişiselleştirilmiş öğrenme özellikleri, kullanım limitleri, abonelik ve benzeri eğitim özellikleri</p>
-        <p>sunabilen bir mobil eğitim uygulamasıdır.</p>
-        <p>Bu Aydınlatma Metni yalnızca kişisel verilerin işlenmesine ilişkindir. Uygulamanın kullanım şartları, lisans koşulları, abonelik</p>
-        <p>kuralları, tıbbi sorumluluk reddi ve benzeri konular ayrıca idiomed End User License Agreement kapsamında düzenlenir.</p>
-        <h2>1. Veri Sorumlusu</h2>
-        <p>KVKK kapsamında kişisel verileriniz aşağıdaki veri sorumlusu tarafından işlenmektedir:</p>
-        <p class="table-label">Alan</p>
-        <p class="table-label">Bilgi</p>
-        <p class="field-label">Veri Sorumlusu</p>
-        <p class="field-label">Uygulama</p>
-        <p>Barış Kayırtar (Citrapps ticari adıyla)</p>
-        <p>idiomed</p>
-        <p class="field-label">E-posta</p>
-        <p class="field-label">Konum</p>
-        <p class="email-line">contact@citrapps.com</p>
-        <p>Mersin, Türkiye</p>
-        <h2>2. İşlenen Kişisel Veri Kategorileri</h2>
-        <p>Uygulama kapsamında aşağıdaki kişisel veri kategorileri işlenebilir:</p>
-        <h3>2.1. Kimlik ve İletişim Verileri</h3>
-        <p>Ad, soyad, e-posta adresi, kullanıcı adı, hesap oluşturma tarihi, iletişim tercihleri ve benzeri hesap bilgileri.</p>
-        <h3>2.2. Hesap ve Giriş Verileri</h3>
-        <p>Kullanıcı ID&#x27;si, Firebase Authentication bilgileri, Google Sign-In veya Apple Sign-In üzerinden alınan sınırlı hesap bilgileri,</p>
-        <p>giriş yöntemi, authentication identifier bilgileri ve hesap güvenliğiyle ilişkili teknik bilgiler.</p>
-        <h3>2.3. Profil, Eğitim ve Kişiselleştirme Verileri</h3>
-        <p>Okul, sınıf, ülke, şehir, klinik seviye, isteğe bağlı doğum tarihi, tema tercihi, sınav tarihi, çalışma hedefi, çalışma tarzı, güçlü</p>
-        <p>ve zayıf konular, çalışma saatleri, hedeflenen başarı düzeyi, sınav stresi, motivasyon ve çalışma tercihi gibi eğitimsel</p>
-        <p>kişiselleştirme verileri.</p>
-        <h3>2.4. Öğrenme ve Kullanım Verileri</h3>
-        <p>Giriş sayısı, son giriş tarihi, streak bilgisi, çözülen soru sayısı, doğru ve yanlış cevaplar, quiz sayısı, günlük soru ve flashcard</p>
-        <p>kullanımı, günlük hedefler, toplam çalışma süresi, konu istatistikleri, kayıtlı sorular, kayıtlı flashcard&#x27;lar, yanlış yapılan</p>
-        <p>sorular, özel deck&#x27;ler, paylaşılan liste kodları, çalışma oturumları, badge bilgileri ve benzeri öğrenme analitiği verileri.</p>
-        <h3>2.5. Abonelik ve Satın Alma Verileri</h3>
-        <p>Ücretsiz/premium durum bilgisi, abonelik türü, aylık veya yıllık abonelik bilgisi, deneme süresi durumu, satın alma</p>
-        <p>doğrulama bilgileri, entitlement/access bilgileri ve App Store veya Google Play üzerinden abonelik erişimini doğrulamak</p>
-        <p>için gerekli bilgiler. Citrapps ödeme kartı numarası, güvenlik kodu veya tam ödeme aracı bilgilerini doğrudan toplamaz</p>
-        <p>veya saklamaz; ödemeler Apple App Store veya Google Play üzerinden işlenir.</p>
-        <h3>2.6. Teknik, Cihaz ve Diagnostik Veriler</h3>
-        <p>Cihaz ve uygulama bilgileri, mobil işletim sistemi, uygulama versiyonu, cihaz veya uygulama instance identifier bilgileri, IP</p>
-        <p>adresi veya proxy bilgileri, dil tercihi, mobil ağ veya operatör bilgisi, uygulama kullanım olayları, crash log&#x27;ları, hata log&#x27;ları,</p>
-        <p>performans verileri, analytics identifier bilgileri, push notification token bilgileri ve benzeri teknik veriler.</p>
-        <h3>2.7. Bildirim Verileri</h3>
-        <p>Push notification token bilgisi, bildirim tercihleri ve çalışma hatırlatmaları, streak hatırlatmaları, günlük hedef bildirimleri</p>
-        <p>veya hesapla ilgili bildirimlerin gönderilmesi için gerekli bilgiler.</p>
-        <h3>2.8. Geri Bildirim, Rapor ve Destek Verileri</h3>
-        <p>Soru raporları, hata bildirimleri, destek talepleri, şikayetler, geri bildirim metinleri, ilgili soru ID&#x27;leri, kullanıcı ID&#x27;si ve bu</p>
-        <p>taleplerin incelenmesi için gerekli metadata.</p>
-        <h3>2.9. Paylaşım ve Liste Verileri</h3>
-        <p>Kullanıcının kaydettiği sorular, oluşturduğu özel listeler, custom deck&#x27;ler, paylaşılan liste kodları, liste metadata bilgileri ve</p>
-        <p>paylaşım özelliğinin çalışması için gerekli sınırlı kullanıcı/oluşturucu bilgileri.</p>
-        <div class="page-marker">Sayfa 1</div>
-        <div class="running-header">idiomed KVKK Aydınlatma Metni</div>
-        <h2>3. İşlenmesi Amaçlanmayan Veriler</h2>
-        <p>Uygulama; gerçek hasta kayıtlarını, gerçek klinik vaka dosyalarını, hastalara ait sağlık verilerini, kimliği belirli veya</p>
-        <p>belirlenebilir üçüncü kişilere ait sağlık bilgilerini, biyometrik verileri veya gerçek hasta bakımına ilişkin bilgileri toplamak</p>
-        <p>amacıyla tasarlanmamıştır.</p>
-        <p>Kullanıcılar; destek mesajı, soru raporu, feedback, paylaşılan liste, custom deck veya herhangi başka bir alan üzerinden</p>
-        <p>gerçek hasta bilgisi, sağlık kaydı, klinik vaka dosyası, hasta kimlik bilgisi, üçüncü kişiye ait hassas veri veya hukuka aykırı</p>
-        <p>içerik göndermemelidir.</p>
-        <p>Bu tür bilgilerin yanlışlıkla gönderilmesi halinde, mümkün olduğu ölçüde ilgili içerik silinebilir, erişimi kısıtlanabilir veya</p>
-        <p>gerekli teknik/idari tedbirler alınabilir.</p>
-        <h2>4. Kişisel Verilerin İşlenme Amaçları</h2>
-        <p>Kişisel verileriniz aşağıdaki amaçlarla işlenebilir:</p>
-        <p class="bullet-line">• kullanıcı hesabı oluşturmak, doğrulamak, güvenliğini sağlamak ve yönetmek;</p>
-        <p class="bullet-line">• Uygulama özelliklerini sunmak ve çalıştırmak;</p>
-        <p class="bullet-line">• soru bankası, flashcard, kayıtlı sorular, custom deck, paylaşılan liste, çalışma geçmişi ve benzeri özellikleri sağlamak;</p>
-        <p class="bullet-line">• öğrenme ilerlemesini, konu istatistiklerini, streak bilgilerini, hedefleri, badge&#x27;leri ve performans verilerini göstermek;</p>
-        <p class="bullet-line">• kullanıcı deneyimini eğitim profili, performans verileri, tercihler ve kullanım davranışlarına göre kişiselleştirmek;</p>
-        <p class="bullet-line">• ücretsiz kullanım limitlerini, premium abonelikleri, deneme süresini ve erişim haklarını yönetmek;</p>
-        <p class="bullet-line">• Apple App Store ve Google Play üzerinden abonelik ve satın alma doğrulaması yapmak;</p>
-        <p class="bullet-line">• çalışma hatırlatmaları, streak hatırlatmaları, günlük hedef bildirimleri, hesap mesajları ve servis güncellemeleri</p>
-        <p>göndermek;</p>
-        <p class="bullet-line">• uygulama kullanımını analiz etmek, performansı ölçmek ve özellikleri iyileştirmek;</p>
-        <p class="bullet-line">• crash, hata ve performans sorunlarını tespit etmek, gidermek ve teknik destek sağlamak;</p>
-        <p class="bullet-line">• güvenliği sağlamak, kötüye kullanımı önlemek, şüpheli aktiviteleri tespit etmek ve sistem bütünlüğünü korumak;</p>
-        <p class="bullet-line">• kullanıcı geri bildirimlerini, soru raporlarını, destek taleplerini ve şikayetleri incelemek;</p>
-        <p class="bullet-line">• yasal yükümlülükleri yerine getirmek;</p>
-        <p class="bullet-line">• uyuşmazlıkların çözümü, hakların tesisi, kullanılması veya korunması için gerekli işlemleri yapmak;</p>
-        <p class="bullet-line">• platform kurallarına, App Store ve Google Play gerekliliklerine ve ilgili mevzuata uyum sağlamak.</p>
-        <h2>5. Kişisel Verilerin Toplanma Yöntemi</h2>
-        <p>Kişisel verileriniz aşağıdaki yollarla elektronik ortamda otomatik veya kısmen otomatik yöntemlerle toplanabilir:</p>
-        <p class="bullet-line">• Uygulamaya kayıt olurken veya hesap oluştururken sizin tarafınızdan sağlanan bilgiler;</p>
-        <p class="bullet-line">• profil, eğitim hedefi ve kişiselleştirme alanlarına girdiğiniz bilgiler;</p>
-        <p class="bullet-line">• Google Sign-In, Apple Sign-In ve Firebase Authentication gibi giriş/doğrulama sistemleri;</p>
-        <p class="bullet-line">• Uygulama içindeki quiz, flashcard, çalışma oturumu, saved question, custom deck ve benzeri kullanım aktiviteleri;</p>
-        <p class="bullet-line">• Apple App Store ve Google Play abonelik/doğrulama sistemleri;</p>
-        <p class="bullet-line">• Firebase, Google Analytics, Firebase Crashlytics, Firebase Cloud Messaging ve benzeri teknik altyapı/analitik/diagnostik</p>
-        <p>servisleri;</p>
-        <p class="bullet-line">• destek, geri bildirim, soru raporu veya şikayet gönderimleri;</p>
-        <p class="bullet-line">• cihazınız, işletim sisteminiz ve Uygulama kullanımınız sırasında otomatik olarak oluşan teknik veriler.</p>
-        <h2>6. Kişisel Verilerin İşlenmesinin Hukuki Sebepleri</h2>
-        <p>Kişisel verileriniz, KVKK&#x27;da öngörülen hukuki sebeplere dayanılarak işlenmektedir. İşleme faaliyetinin niteliğine göre</p>
-        <p>aşağıdaki hukuki sebeplerden biri veya birkaçı uygulanabilir:</p>
-        <h3>6.1. Sözleşmenin Kurulması veya İfası İçin Gerekli Olması</h3>
-        <p>Hesap oluşturulması, kullanıcının Uygulamaya giriş yapması, eğitim özelliklerinin sunulması, abonelik erişiminin</p>
-        <p>sağlanması, ücretsiz/premium planların yönetilmesi ve kullanıcının talep ettiği hizmetlerin sağlanması için kişisel verilerin</p>
-        <p>işlenmesi gerekebilir.</p>
-        <h3>6.2. Veri Sorumlusunun Hukuki Yükümlülüğünü Yerine Getirmesi</h3>
-        <p>Yasal taleplerin karşılanması, platform kurallarına uyum, tüketici ve abonelik süreçleri, güvenlik kayıtları, uyuşmazlık</p>
-        <p>süreçleri ve ilgili mevzuattan kaynaklanan yükümlülükler kapsamında kişisel veriler işlenebilir.</p>
-        <div class="page-marker">Sayfa 2</div>
-        <div class="running-header">idiomed KVKK Aydınlatma Metni</div>
-        <h3>6.3. Bir Hakkın Tesisi, Kullanılması veya Korunması</h3>
-        <p>Uyuşmazlıkların çözümü, kullanıcı şikayetlerinin incelenmesi, hak taleplerinin değerlendirilmesi, hukuki savunma süreçleri</p>
-        <p>ve delil niteliği taşıyabilecek kayıtların korunması amacıyla kişisel veriler işlenebilir.</p>
-        <h3>6.4. Meşru Menfaat</h3>
-        <p>Uygulamanın güvenliğinin sağlanması, kötüye kullanımın önlenmesi, teknik hataların giderilmesi, crash ve performans</p>
-        <p>analizleri yapılması, ürünün geliştirilmesi, kullanıcı deneyiminin iyileştirilmesi ve hizmet kalitesinin artırılması amacıyla,</p>
-        <p>temel hak ve özgürlüklerinize zarar vermemek kaydıyla kişisel veriler işlenebilir.</p>
-        <h3>6.5. Açık Rıza</h3>
-        <p>Gerekli olduğu durumlarda, özellikle isteğe bağlı bazı profil bilgileri, belirli bildirim tercihleri, pazarlama iletişimi, özel</p>
-        <p>nitelikli veri riski doğurabilecek alanlar veya yurt dışına aktarım bakımından açık rıza talep edilebilir. Aydınlatma yapılması</p>
-        <p>açık rıza alındığı anlamına gelmez; açık rıza gereken hallerde rıza, aydınlatmadan ayrı ve açık bir işlemle alınır. Açık rızanızı</p>
-        <p>her zaman geri çekebilirsiniz; rızanın geri çekilmesi, geri çekilmeden önce rızaya dayalı olarak yapılan işlemenin hukuka</p>
-        <p>uygunluğunu etkilemez.</p>
-        <h2>7. Kişisel Verilerin Aktarılması</h2>
-        <p>Kişisel verileriniz, yukarıda belirtilen amaçlarla ve gerekli olduğu ölçüde aşağıdaki kişi, kurum veya hizmet sağlayıcı</p>
-        <p>kategorilerine aktarılabilir:</p>
-        <p class="bullet-line">• bulut altyapısı ve veri barındırma hizmet sağlayıcıları;</p>
-        <p class="bullet-line">• Firebase ve Google servisleri;</p>
-        <p class="bullet-line">• Google Analytics, Firebase Analytics, Firebase Crashlytics ve benzeri analiz/diagnostik servisleri;</p>
-        <p class="bullet-line">• Firebase Cloud Messaging ve benzeri push notification servisleri;</p>
-        <p class="bullet-line">• Google Sign-In ve Apple Sign-In gibi kimlik doğrulama servisleri;</p>
-        <p class="bullet-line">• Apple App Store ve Google Play gibi abonelik, ödeme ve satın alma doğrulama platformları;</p>
-        <p class="bullet-line">• teknik destek, güvenlik, bakım, hata giderme ve altyapı hizmeti sağlayıcıları;</p>
-        <p class="bullet-line">• hukuki danışmanlar, mali müşavirler veya yetkili danışmanlık hizmeti sağlayıcıları;</p>
-        <p class="bullet-line">• yetkili kamu kurum ve kuruluşları, mahkemeler, kolluk birimleri veya düzenleyici otoriteler;</p>
-        <p class="bullet-line">• kanunen yetkili özel hukuk kişileri;</p>
-        <p class="bullet-line">• birleşme, devralma, yeniden yapılandırma, varlık devri veya benzeri ticari işlemler kapsamında ilgili taraflar.</p>
-        <p>Kişisel verileriniz satılmaz. Uygulama, mevcut yapıda reklam ağları veya hedefli reklamcılık amacıyla kişisel veri paylaşımı</p>
-        <p>yapmaz.</p>
-        <h2>8. Yurt Dışına Aktarım</h2>
-        <p>Uygulamanın teknik altyapısında Firebase, Google, Apple ve benzeri global hizmet sağlayıcıları kullanılabileceğinden,</p>
-        <p>kişisel verileriniz yurt dışında bulunan sunucularda işlenebilir veya yurt dışındaki hizmet sağlayıcılara aktarılabilir.</p>
-        <p>Yurt dışına aktarım; başta KVKK&#x27;nın yurt dışına aktarıma ilişkin hükümleri olmak üzere ilgili mevzuatta öngörülen şartlara</p>
-        <p>uygun olarak, aktarımın niteliğine göre yeterlilik kararı, uygun güvenceler, standart sözleşmeler, bağlayıcı şirket kuralları,</p>
-        <p>istisnai aktarım halleri, açık rıza veya mevzuatta izin verilen diğer hukuki mekanizmalardan biri kapsamında</p>
-        <p>gerçekleştirilebilir.</p>
-        <p>Yurt dışına aktarım yalnızca Uygulamanın çalıştırılması, kullanıcı hesabının yönetilmesi, abonelik doğrulaması, veri</p>
-        <p>barındırma, analitik, hata tespiti, güvenlik, bildirim gönderimi ve hizmetin sağlanması için gerekli olduğu ölçüde yapılır.</p>
-        <p>Açık rızaya dayalı bir yurt dışına aktarım mekanizması kullanılması gereken hallerde, bu rıza ayrıca ve aydınlatma</p>
-        <p>metninden bağımsız şekilde alınır.</p>
-        <h2>9. Kişisel Verilerin Saklama Süresi</h2>
-        <p>Kişisel verileriniz, işleme amaçlarının gerektirdiği süre boyunca ve ilgili mevzuatta öngörülen saklama süreleriyle sınırlı</p>
-        <p>olarak saklanır. Genel ilke olarak kişisel veriler; kullanıcı hesabınız aktif olduğu sürece, Uygulama hizmetlerinin sağlanması</p>
-        <p>için gerekli olduğu sürece, yasal yükümlülükler ve uyuşmazlık süreçleri kapsamında gerekli olduğu sürece saklanabilir.</p>
-        <p class="table-label">Veri Grubu</p>
-        <p class="table-label">Genel Saklama Yaklaşımı</p>
-        <p>Hesap, kimlik ve iletişim verileri</p>
-        <p>Öğrenme ve kullanım verileri</p>
-        <p>Hesap aktif olduğu sürece; hesap silme sonrası yasal, güvenlik veya</p>
-        <p>uyuşmazlık gereklilikleri varsa gerekli süreyle sınırlı olarak.</p>
-        <p>Kullanıcıya çalışma geçmişi, istatistik, hedef, streak ve kişiselleştirme</p>
-        <p>hizmetleri sunulması için gerekli olduğu sürece.</p>
-        <p>Abonelik ve satın alma doğrulama</p>
-        <p>verileri</p>
-        <p>Crash, hata ve performans verileri</p>
-        <p>Abonelik erişimi, platform doğrulaması, yasal yükümlülükler, tüketici işlemleri</p>
-        <p>ve uyuşmazlıklar için gerekli olduğu sürece.</p>
-        <p>Teknik hata giderme, güvenlik, performans analizi ve hizmet kalitesinin</p>
-        <p>iyileştirilmesi için gerekli makul süre boyunca.</p>
-        <p>Geri bildirim, rapor ve destek kayıtları</p>
-        <p>Talebin değerlendirilmesi, hizmet kalitesinin iyileştirilmesi ve olası</p>
-        <p>uyuşmazlıkların yönetimi için gerekli olduğu sürece.</p>
-        <div class="page-marker">Sayfa 3</div>
-        <div class="running-header">idiomed KVKK Aydınlatma Metni</div>
-        <p class="table-label">Veri Grubu</p>
-        <p>Yedekleme kayıtları</p>
-        <p class="table-label">Genel Saklama Yaklaşımı</p>
-        <p>Teknik yedekleme döngüleri kapsamında makul süre boyunca; mümkün</p>
-        <p>olduğunda olağan işleme süreçlerinden ayrılarak.</p>
-        <p>Hesabınızı sildiğinizde veya silme talebinde bulunduğunuzda, kişisel verileriniz mümkün olan ölçüde silinir, yok edilir veya</p>
-        <p>anonim hale getirilir. Ancak hukuki yükümlülükler, güvenlik, ödeme/abonelik doğrulama, dolandırıcılık önleme, uyuşmazlık</p>
-        <p>çözümü, yedekleme sistemleri veya mevzuat gereklilikleri nedeniyle bazı veriler daha uzun süre saklanabilir.</p>
-        <h2>10. Özel Nitelikli Kişisel Veriler</h2>
-        <p>Uygulama; sağlık verisi, hasta kaydı, biyometrik veri, gerçek klinik vaka bilgisi veya üçüncü kişilere ait özel nitelikli kişisel</p>
-        <p>verileri toplamak amacıyla tasarlanmamıştır.</p>
-        <p>Kullanıcıların Uygulama üzerinden gerçek hasta bilgisi, sağlık kaydı, klinik dosya, hasta kimliği, görüntüleme sonucu,</p>
-        <p>laboratuvar sonucu, reçete, epikriz, biyometrik veri veya üçüncü kişilere ait özel nitelikli veri göndermemesi gerekir.</p>
-        <p>Uygulamada yer alan sınav stresi, çalışma motivasyonu, çalışma alışkanlığı veya benzeri alanlar, kullanıcının eğitim</p>
-        <p>deneyimini kişiselleştirmek amacıyla tasarlanmıştır ve tıbbi tanı, tedavi, sağlık durumu değerlendirmesi veya</p>
-        <p>psikolojik/psikiyatrik değerlendirme amacı taşımaz.</p>
-        <p>İleride özel nitelikli kişisel veri işlenmesini gerektirecek bir özellik eklenirse, bu işleme faaliyeti yalnızca KVKK&#x27;ya uygun</p>
-        <p>şekilde ve gerekli hukuki şartlar sağlanarak gerçekleştirilecektir.</p>
-        <h2>11. AI ve Kullanıcı Verileri</h2>
-        <p>Uygulama, kullanıcıya yönelik bir yapay zeka sohbet asistanı veya kullanıcı verilerini işleyen gerçek zamanlı AI danışmanlık</p>
-        <p>hizmeti sunmak amacıyla tasarlanmamıştır.</p>
-        <p>Uygulama içerikleri AI-generated veya AI-assisted yöntemlerle oluşturulmuş olabilir. Ancak kullanıcı kişisel verilerinin,</p>
-        <p>kullanıcıya yönelik AI işleme amacıyla yapay zeka model sağlayıcılarına kasıtlı olarak gönderilmesi mevcut yapıda</p>
-        <p>amaçlanmamaktadır.</p>
-        <p>İleride kullanıcıya yönelik AI özellikleri eklenir veya kullanıcı verilerinin AI servis sağlayıcılarıyla paylaşılması gerekirse, bu</p>
-        <p>Aydınlatma Metni güncellenecek ve gerekli olması halinde ayrıca açık rıza veya ilgili hukuki mekanizma işletilecektir.</p>
-        <h2>12. Reklam ve Hedefli Reklamcılık</h2>
-        <p>Uygulama mevcut yapıda reklam ağları kullanmaz ve kişisel verileri hedefli reklamcılık amacıyla üçüncü taraf reklam</p>
-        <p>ağlarıyla paylaşmaz.</p>
-        <p>İleride reklam, hedefli reklamcılık, reklam ağı entegrasyonu, çerez/piksel veya benzeri takip teknolojileri eklenirse, bu</p>
-        <p>Aydınlatma Metni ve ilgili gizlilik dokümanları güncellenecek; gerekli olduğu hallerde kullanıcılardan ayrıca onay veya</p>
-        <p>tercih alınacaktır.</p>
-        <h2>13. İlgili Kişinin KVKK Kapsamındaki Hakları</h2>
-        <p>KVKK&#x27;nın 11. maddesi kapsamında, kişisel verisi işlenen ilgili kişi olarak veri sorumlusuna başvurarak aşağıdaki haklara</p>
-        <p>sahipsiniz:</p>
-        <p class="bullet-line">• kişisel verilerinizin işlenip işlenmediğini öğrenme;</p>
-        <p class="bullet-line">• kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme;</p>
-        <p class="bullet-line">• kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme;</p>
-        <p class="bullet-line">• yurt içinde veya yurt dışında kişisel verilerinizin aktarıldığı üçüncü kişileri bilme;</p>
-        <p class="bullet-line">• kişisel verilerinizin eksik veya yanlış işlenmiş olması halinde bunların düzeltilmesini isteme;</p>
-        <p class="bullet-line">• KVKK&#x27;da öngörülen şartlar çerçevesinde kişisel verilerinizin silinmesini veya yok edilmesini isteme;</p>
-        <p class="bullet-line">• düzeltme, silme veya yok etme işlemlerinin, kişisel verilerinizin aktarıldığı üçüncü kişilere bildirilmesini isteme;</p>
-        <p class="bullet-line">• işlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya</p>
-        <p>çıkmasına itiraz etme;</p>
-        <p class="bullet-line">• kişisel verilerinizin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız halinde zararın giderilmesini talep etme.</p>
-        <h2>14. Başvuru Yöntemi</h2>
-        <p>KVKK kapsamındaki haklarınızı kullanmak için başvurularınızı, kimliğinizi doğrulamaya elverişli bilgiler ve talebinizin açık</p>
-        <p>açıklamasıyla birlikte aşağıdaki e-posta adresine iletebilirsiniz:</p>
-        <p class="email-line">contact@citrapps.com</p>
-        <p>Başvurunuz, niteliğine göre en kısa sürede ve en geç ilgili mevzuatta öngörülen süre içinde sonuçlandırılır. Kural olarak bu</p>
-        <p>süre başvurunun veri sorumlusuna ulaşmasından itibaren en geç 30 gündür.</p>
-        <p>Talebinizin niteliğine göre ek bilgi veya kimlik doğrulaması istenebilir. Yetkisiz kişilere veri açıklanmaması için gerekli</p>
-        <p>güvenlik kontrolleri yapılabilir. Başvurunun ayrıca maliyet gerektirmesi halinde, ilgili mevzuatta belirtilen sınırlar dahilinde</p>
-        <p>ücret talep edilebilir.</p>
-        <div class="page-marker">Sayfa 4</div>
-        <div class="running-header">idiomed KVKK Aydınlatma Metni</div>
-        <h2>15. Diğer Politika ve Şartlarla İlişki</h2>
-        <p>Bu Aydınlatma Metni, idiomed Privacy Policy ve idiomed End User License Agreement ile birlikte değerlendirilmelidir.</p>
-        <p>Privacy Policy, kişisel verilerin global gizlilik standartları kapsamında nasıl işlendiğini açıklar. EULA ise Uygulamanın</p>
-        <p>kullanım şartlarını, lisans hükümlerini, abonelik kurallarını, yasaklı kullanımları, sorumluluk sınırlarını ve tıbbi sorumluluk</p>
-        <p>reddini düzenler.</p>
-        <p>Bu Aydınlatma Metni ile Privacy Policy veya EULA arasında kişisel verilerin işlenmesine ilişkin bir farklılık olması halinde,</p>
-        <p>Türkiye&#x27;deki kullanıcılar bakımından KVKK kapsamında zorunlu olan hükümler öncelikli olarak uygulanır.</p>
-        <h2>16. Güncellemeler</h2>
-        <p>Bu Aydınlatma Metni zaman zaman güncellenebilir. Güncellenmiş metin, &#x27;Son Güncelleme&#x27; tarihi değiştirilerek yayımlanır.</p>
-        <p>Önemli değişiklikler yapılması halinde, gerekli olduğu ölçüde Uygulama içi bildirim, e-posta veya benzeri uygun</p>
-        <p>yöntemlerle kullanıcılara ek bilgilendirme yapılabilir. Kullanıcıların bu metni düzenli olarak incelemesi önerilir.</p>
-        <h2>17. İletişim</h2>
-        <p>Bu Aydınlatma Metni veya kişisel verilerinizin işlenmesi hakkında soru, talep veya başvurularınız için bizimle iletişime</p>
-        <p>geçebilirsiniz:</p>
-        <p class="table-label">Alan</p>
-        <p class="table-label">Bilgi</p>
-        <p class="field-label">Citrapps / idiomed</p>
-        <p class="field-label">E-posta</p>
-        <p>Veri Sorumlusu: Barış Kayırtar (Citrapps ticari adıyla)</p>
-        <p class="email-line">contact@citrapps.com</p>
-        <p class="field-label">Konum</p>
-        <p>Mersin, Türkiye</p>
-        <div class="page-marker">Sayfa 5</div>
-        <div class="running-header">idiomed KVKK Aydınlatma Metni</div>
+  <main class="main">
+    <section class="hero">
+      <h1>KVKK Aydınlatma Metni.</h1>
+
+      <p>
+        Bu KVKK Aydınlatma Metni, idiomed mobil uygulamasını ve ilgili hizmetleri
+        kullanan kişilerin kişisel verilerinin 6698 sayılı Kişisel Verilerin
+        Korunması Kanunu kapsamında nasıl işlendiğini açıklar.
+      </p>
+
+      <div class="meta-row">
+        <div class="meta-box">
+          <span class="meta-label">Ürün</span>
+          <span class="meta-value">idiomed</span>
+        </div>
+
+        <div class="meta-box">
+          <span class="meta-label">Yürürlük Tarihi</span>
+          <span class="meta-value">26 Nisan 2026</span>
+        </div>
+
+        <div class="meta-box">
+          <span class="meta-label">Son Güncelleme</span>
+          <span class="meta-value">26 Nisan 2026</span>
+        </div>
       </div>
-    </article>
 
-    <p class="footer-note">© 2026 Citrapps. All rights reserved.</p>
+      <div class="hero-actions">
+        <a class="button" href="#contents">View Contents</a>
+        <a class="button secondary" href="https://legal.citrapps.com/">Back to Legal Center</a>
+      </div>
+    </section>
+
+    <div class="content-layout" id="contents">
+      <aside class="toc" aria-label="Table of contents">
+        <p class="toc-title">Contents</p>
+        <a href="#overview">Overview</a>
+        <a href="#1-veri-sorumlusu">1. Veri Sorumlusu</a>
+        <a href="#2-islenen-kisisel-veri-kategorileri">2. İşlenen Kişisel Veri Kategorileri</a>
+        <a href="#3-islenmesi-amaclanmayan-veriler">3. İşlenmesi Amaçlanmayan Veriler</a>
+        <a href="#4-kisisel-verilerin-islenme-amaclari">4. Kişisel Verilerin İşlenme Amaçları</a>
+        <a href="#5-kisisel-verilerin-toplanma-yontemi">5. Kişisel Verilerin Toplanma Yöntemi</a>
+        <a href="#6-kisisel-verilerin-islenmesinin-hukuki-sebepleri">6. Kişisel Verilerin İşlenmesinin Hukuki Sebepleri</a>
+        <a href="#7-kisisel-verilerin-aktarilmasi">7. Kişisel Verilerin Aktarılması</a>
+        <a href="#8-yurt-disina-aktarim">8. Yurt Dışına Aktarım</a>
+        <a href="#9-kisisel-verilerin-saklama-suresi">9. Kişisel Verilerin Saklama Süresi</a>
+        <a href="#10-ozel-nitelikli-kisisel-veriler">10. Özel Nitelikli Kişisel Veriler</a>
+        <a href="#11-ai-ve-kullanici-verileri">11. AI ve Kullanıcı Verileri</a>
+        <a href="#12-reklam-ve-hedefli-reklamcilik">12. Reklam ve Hedefli Reklamcılık</a>
+        <a href="#13-ilgili-kisinin-kvkk-kapsamindaki-haklari">13. İlgili Kişinin KVKK Kapsamındaki Hakları</a>
+        <a href="#14-basvuru-yontemi">14. Başvuru Yöntemi</a>
+        <a href="#15-diger-politika-ve-sartlarla-iliski">15. Diğer Politika ve Şartlarla İlişki</a>
+        <a href="#16-guncellemeler">16. Güncellemeler</a>
+        <a href="#17-iletisim">17. İletişim</a>
+      </aside>
+
+      <article class="document">
+        <section class="section" id="overview">
+          <div class="section-header">
+            <div class="section-number">00</div>
+            <h2>Overview</h2>
+          </div>
+          <p>Bu KVKK Aydınlatma Metni, idiomed mobil uygulamasını ve ilgili hizmetleri kullanan kişilerin kişisel verilerinin 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında nasıl işlendiğini açıklamak amacıyla hazırlanmıştır.</p>
+          <p>Bu metin bir açık rıza metni değildir; yalnızca aydınlatma amacı taşır. Açık rıza gerektiren bir işleme faaliyeti bulunması halinde, ilgili açık rıza ayrıca ve ayrı bir metin veya mekanizma üzerinden talep edilir.</p>
+          <p>idiomed; tıp fakültesi öğrencileri ve benzer kullanıcılar için hazırlanmış, soru bankası, flashcard, klinik vaka temelli eğitim içerikleri, çalışma takibi, kişiselleştirilmiş öğrenme özellikleri, kullanım limitleri, abonelik ve benzeri eğitim özellikleri sunabilen bir mobil eğitim uygulamasıdır.</p>
+          <p>Bu Aydınlatma Metni yalnızca kişisel verilerin işlenmesine ilişkindir. Uygulamanın kullanım şartları, lisans koşulları, abonelik kuralları, tıbbi sorumluluk reddi ve benzeri konular ayrıca idiomed End User License Agreement kapsamında düzenlenir.</p>
+        </section>
+
+        <section class="section" id="1-veri-sorumlusu">
+          <div class="section-header">
+            <div class="section-number">01</div>
+            <h2>1. Veri Sorumlusu</h2>
+          </div>
+          <p>KVKK kapsamında kişisel verileriniz aşağıdaki veri sorumlusu tarafından işlenmektedir:</p>
+
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <th>Veri Sorumlusu</th>
+                <td>Barış Kayırtar (Citrapps ticari adıyla)</td>
+              </tr>
+              <tr>
+                <th>Uygulama</th>
+                <td>idiomed</td>
+              </tr>
+              <tr>
+                <th>E-posta</th>
+                <td>contact@citrapps.com</td>
+              </tr>
+              <tr>
+                <th>Konum</th>
+                <td>Mersin, Türkiye</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="section" id="2-islenen-kisisel-veri-kategorileri">
+          <div class="section-header">
+            <div class="section-number">02</div>
+            <h2>2. İşlenen Kişisel Veri Kategorileri</h2>
+          </div>
+          <p>Uygulama kapsamında aşağıdaki kişisel veri kategorileri işlenebilir:</p>
+
+          <h3>2.1. Kimlik ve İletişim Verileri</h3>
+          <p>Ad, soyad, e-posta adresi, kullanıcı adı, hesap oluşturma tarihi, iletişim tercihleri ve benzeri hesap bilgileri.</p>
+
+          <h3>2.2. Hesap ve Giriş Verileri</h3>
+          <p>Kullanıcı ID'si, Firebase Authentication bilgileri, Google Sign-In veya Apple Sign-In üzerinden alınan sınırlı hesap bilgileri, giriş yöntemi, authentication identifier bilgileri ve hesap güvenliğiyle ilişkili teknik bilgiler.</p>
+
+          <h3>2.3. Profil, Eğitim ve Kişiselleştirme Verileri</h3>
+          <p>Okul, sınıf, ülke, şehir, klinik seviye, isteğe bağlı doğum tarihi, tema tercihi, sınav tarihi, çalışma hedefi, çalışma tarzı, güçlü ve zayıf konular, çalışma saatleri, hedeflenen başarı düzeyi, sınav stresi, motivasyon ve çalışma tercihi gibi eğitimsel kişiselleştirme verileri.</p>
+
+          <h3>2.4. Öğrenme ve Kullanım Verileri</h3>
+          <p>Giriş sayısı, son giriş tarihi, streak bilgisi, çözülen soru sayısı, doğru ve yanlış cevaplar, quiz sayısı, günlük soru ve flashcard kullanımı, günlük hedefler, toplam çalışma süresi, konu istatistikleri, kayıtlı sorular, kayıtlı flashcard'lar, yanlış yapılan sorular, özel deck'ler, paylaşılan liste kodları, çalışma oturumları, badge bilgileri ve benzeri öğrenme analitiği verileri.</p>
+
+          <h3>2.5. Abonelik ve Satın Alma Verileri</h3>
+          <p>Ücretsiz/premium durum bilgisi, abonelik türü, aylık veya yıllık abonelik bilgisi, deneme süresi durumu, satın alma doğrulama bilgileri, entitlement/access bilgileri ve App Store veya Google Play üzerinden abonelik erişimini doğrulamak için gerekli bilgiler. Citrapps ödeme kartı numarası, güvenlik kodu veya tam ödeme aracı bilgilerini doğrudan toplamaz veya saklamaz; ödemeler Apple App Store veya Google Play üzerinden işlenir.</p>
+
+          <h3>2.6. Teknik, Cihaz ve Diagnostik Veriler</h3>
+          <p>Cihaz ve uygulama bilgileri, mobil işletim sistemi, uygulama versiyonu, cihaz veya uygulama instance identifier bilgileri, IP adresi veya proxy bilgileri, dil tercihi, mobil ağ veya operatör bilgisi, uygulama kullanım olayları, crash log'ları, hata log'ları, performans verileri, analytics identifier bilgileri, push notification token bilgileri ve benzeri teknik veriler.</p>
+
+          <h3>2.7. Bildirim Verileri</h3>
+          <p>Push notification token bilgisi, bildirim tercihleri ve çalışma hatırlatmaları, streak hatırlatmaları, günlük hedef bildirimleri veya hesapla ilgili bildirimlerin gönderilmesi için gerekli bilgiler.</p>
+
+          <h3>2.8. Geri Bildirim, Rapor ve Destek Verileri</h3>
+          <p>Soru raporları, hata bildirimleri, destek talepleri, şikayetler, geri bildirim metinleri, ilgili soru ID'leri, kullanıcı ID'si ve bu taleplerin incelenmesi için gerekli metadata.</p>
+
+          <h3>2.9. Paylaşım ve Liste Verileri</h3>
+          <p>Kullanıcının kaydettiği sorular, oluşturduğu özel listeler, custom deck'ler, paylaşılan liste kodları, liste metadata bilgileri ve paylaşım özelliğinin çalışması için gerekli sınırlı kullanıcı/oluşturucu bilgileri.</p>
+
+          <span class="page-marker">Sayfa 1 · idiomed KVKK Aydınlatma Metni</span>
+        </section>
+
+        <section class="section" id="3-islenmesi-amaclanmayan-veriler">
+          <div class="section-header">
+            <div class="section-number">03</div>
+            <h2>3. İşlenmesi Amaçlanmayan Veriler</h2>
+          </div>
+          <p>Uygulama; gerçek hasta kayıtlarını, gerçek klinik vaka dosyalarını, hastalara ait sağlık verilerini, kimliği belirli veya belirlenebilir üçüncü kişilere ait sağlık bilgilerini, biyometrik verileri veya gerçek hasta bakımına ilişkin bilgileri toplamak amacıyla tasarlanmamıştır.</p>
+          <p>Kullanıcılar; destek mesajı, soru raporu, feedback, paylaşılan liste, custom deck veya herhangi başka bir alan üzerinden gerçek hasta bilgisi, sağlık kaydı, klinik vaka dosyası, hasta kimlik bilgisi, üçüncü kişiye ait hassas veri veya hukuka aykırı içerik göndermemelidir.</p>
+          <p>Bu tür bilgilerin yanlışlıkla gönderilmesi halinde, mümkün olduğu ölçüde ilgili içerik silinebilir, erişimi kısıtlanabilir veya gerekli teknik/idari tedbirler alınabilir.</p>
+        </section>
+
+        <section class="section" id="4-kisisel-verilerin-islenme-amaclari">
+          <div class="section-header">
+            <div class="section-number">04</div>
+            <h2>4. Kişisel Verilerin İşlenme Amaçları</h2>
+          </div>
+          <p>Kişisel verileriniz aşağıdaki amaçlarla işlenebilir:</p>
+          <ul class="policy-list">
+            <li>kullanıcı hesabı oluşturmak, doğrulamak, güvenliğini sağlamak ve yönetmek;</li>
+            <li>Uygulama özelliklerini sunmak ve çalıştırmak;</li>
+            <li>soru bankası, flashcard, kayıtlı sorular, custom deck, paylaşılan liste, çalışma geçmişi ve benzeri özellikleri sağlamak;</li>
+            <li>öğrenme ilerlemesini, konu istatistiklerini, streak bilgilerini, hedefleri, badge'leri ve performans verilerini göstermek;</li>
+            <li>kullanıcı deneyimini eğitim profili, performans verileri, tercihler ve kullanım davranışlarına göre kişiselleştirmek;</li>
+            <li>ücretsiz kullanım limitlerini, premium abonelikleri, deneme süresini ve erişim haklarını yönetmek;</li>
+            <li>Apple App Store ve Google Play üzerinden abonelik ve satın alma doğrulaması yapmak;</li>
+            <li>çalışma hatırlatmaları, streak hatırlatmaları, günlük hedef bildirimleri, hesap mesajları ve servis güncellemeleri göndermek;</li>
+            <li>uygulama kullanımını analiz etmek, performansı ölçmek ve özellikleri iyileştirmek;</li>
+            <li>crash, hata ve performans sorunlarını tespit etmek, gidermek ve teknik destek sağlamak;</li>
+            <li>güvenliği sağlamak, kötüye kullanımı önlemek, şüpheli aktiviteleri tespit etmek ve sistem bütünlüğünü korumak;</li>
+            <li>kullanıcı geri bildirimlerini, soru raporlarını, destek taleplerini ve şikayetleri incelemek;</li>
+            <li>yasal yükümlülükleri yerine getirmek;</li>
+            <li>uyuşmazlıkların çözümü, hakların tesisi, kullanılması veya korunması için gerekli işlemleri yapmak;</li>
+            <li>platform kurallarına, App Store ve Google Play gerekliliklerine ve ilgili mevzuata uyum sağlamak.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="5-kisisel-verilerin-toplanma-yontemi">
+          <div class="section-header">
+            <div class="section-number">05</div>
+            <h2>5. Kişisel Verilerin Toplanma Yöntemi</h2>
+          </div>
+          <p>Kişisel verileriniz aşağıdaki yollarla elektronik ortamda otomatik veya kısmen otomatik yöntemlerle toplanabilir:</p>
+          <ul class="policy-list">
+            <li>Uygulamaya kayıt olurken veya hesap oluştururken sizin tarafınızdan sağlanan bilgiler;</li>
+            <li>profil, eğitim hedefi ve kişiselleştirme alanlarına girdiğiniz bilgiler;</li>
+            <li>Google Sign-In, Apple Sign-In ve Firebase Authentication gibi giriş/doğrulama sistemleri;</li>
+            <li>Uygulama içindeki quiz, flashcard, çalışma oturumu, saved question, custom deck ve benzeri kullanım aktiviteleri;</li>
+            <li>Apple App Store ve Google Play abonelik/doğrulama sistemleri;</li>
+            <li>Firebase, Google Analytics, Firebase Crashlytics, Firebase Cloud Messaging ve benzeri teknik altyapı/analitik/diagnostik servisleri;</li>
+            <li>destek, geri bildirim, soru raporu veya şikayet gönderimleri;</li>
+            <li>cihazınız, işletim sisteminiz ve Uygulama kullanımınız sırasında otomatik olarak oluşan teknik veriler.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="6-kisisel-verilerin-islenmesinin-hukuki-sebepleri">
+          <div class="section-header">
+            <div class="section-number">06</div>
+            <h2>6. Kişisel Verilerin İşlenmesinin Hukuki Sebepleri</h2>
+          </div>
+          <p>Kişisel verileriniz, KVKK'da öngörülen hukuki sebeplere dayanılarak işlenmektedir. İşleme faaliyetinin niteliğine göre aşağıdaki hukuki sebeplerden biri veya birkaçı uygulanabilir:</p>
+
+          <h3>6.1. Sözleşmenin Kurulması veya İfası İçin Gerekli Olması</h3>
+          <p>Hesap oluşturulması, kullanıcının Uygulamaya giriş yapması, eğitim özelliklerinin sunulması, abonelik erişiminin sağlanması, ücretsiz/premium planların yönetilmesi ve kullanıcının talep ettiği hizmetlerin sağlanması için kişisel verilerin işlenmesi gerekebilir.</p>
+
+          <h3>6.2. Veri Sorumlusunun Hukuki Yükümlülüğünü Yerine Getirmesi</h3>
+          <p>Yasal taleplerin karşılanması, platform kurallarına uyum, tüketici ve abonelik süreçleri, güvenlik kayıtları, uyuşmazlık süreçleri ve ilgili mevzuattan kaynaklanan yükümlülükler kapsamında kişisel veriler işlenebilir.</p>
+
+          <span class="page-marker">Sayfa 2 · idiomed KVKK Aydınlatma Metni</span>
+
+          <h3>6.3. Bir Hakkın Tesisi, Kullanılması veya Korunması</h3>
+          <p>Uyuşmazlıkların çözümü, kullanıcı şikayetlerinin incelenmesi, hak taleplerinin değerlendirilmesi, hukuki savunma süreçleri ve delil niteliği taşıyabilecek kayıtların korunması amacıyla kişisel veriler işlenebilir.</p>
+
+          <h3>6.4. Meşru Menfaat</h3>
+          <p>Uygulamanın güvenliğinin sağlanması, kötüye kullanımın önlenmesi, teknik hataların giderilmesi, crash ve performans analizleri yapılması, ürünün geliştirilmesi, kullanıcı deneyiminin iyileştirilmesi ve hizmet kalitesinin artırılması amacıyla, temel hak ve özgürlüklerinize zarar vermemek kaydıyla kişisel veriler işlenebilir.</p>
+
+          <h3>6.5. Açık Rıza</h3>
+          <p>Gerekli olduğu durumlarda, özellikle isteğe bağlı bazı profil bilgileri, belirli bildirim tercihleri, pazarlama iletişimi, özel nitelikli veri riski doğurabilecek alanlar veya yurt dışına aktarım bakımından açık rıza talep edilebilir. Aydınlatma yapılması açık rıza alındığı anlamına gelmez; açık rıza gereken hallerde rıza, aydınlatmadan ayrı ve açık bir işlemle alınır. Açık rızanızı her zaman geri çekebilirsiniz; rızanın geri çekilmesi, geri çekilmeden önce rızaya dayalı olarak yapılan işlemenin hukuka uygunluğunu etkilemez.</p>
+        </section>
+
+        <section class="section" id="7-kisisel-verilerin-aktarilmasi">
+          <div class="section-header">
+            <div class="section-number">07</div>
+            <h2>7. Kişisel Verilerin Aktarılması</h2>
+          </div>
+          <p>Kişisel verileriniz, yukarıda belirtilen amaçlarla ve gerekli olduğu ölçüde aşağıdaki kişi, kurum veya hizmet sağlayıcı kategorilerine aktarılabilir:</p>
+          <ul class="policy-list">
+            <li>bulut altyapısı ve veri barındırma hizmet sağlayıcıları;</li>
+            <li>Firebase ve Google servisleri;</li>
+            <li>Google Analytics, Firebase Analytics, Firebase Crashlytics ve benzeri analiz/diagnostik servisleri;</li>
+            <li>Firebase Cloud Messaging ve benzeri push notification servisleri;</li>
+            <li>Google Sign-In ve Apple Sign-In gibi kimlik doğrulama servisleri;</li>
+            <li>Apple App Store ve Google Play gibi abonelik, ödeme ve satın alma doğrulama platformları;</li>
+            <li>teknik destek, güvenlik, bakım, hata giderme ve altyapı hizmeti sağlayıcıları;</li>
+            <li>hukuki danışmanlar, mali müşavirler veya yetkili danışmanlık hizmeti sağlayıcıları;</li>
+            <li>yetkili kamu kurum ve kuruluşları, mahkemeler, kolluk birimleri veya düzenleyici otoriteler;</li>
+            <li>kanunen yetkili özel hukuk kişileri;</li>
+            <li>birleşme, devralma, yeniden yapılandırma, varlık devri veya benzeri ticari işlemler kapsamında ilgili taraflar.</li>
+          </ul>
+          <p>Kişisel verileriniz satılmaz. Uygulama, mevcut yapıda reklam ağları veya hedefli reklamcılık amacıyla kişisel veri paylaşımı yapmaz.</p>
+        </section>
+
+        <section class="section" id="8-yurt-disina-aktarim">
+          <div class="section-header">
+            <div class="section-number">08</div>
+            <h2>8. Yurt Dışına Aktarım</h2>
+          </div>
+          <p>Uygulamanın teknik altyapısında Firebase, Google, Apple ve benzeri global hizmet sağlayıcıları kullanılabileceğinden, kişisel verileriniz yurt dışında bulunan sunucularda işlenebilir veya yurt dışındaki hizmet sağlayıcılara aktarılabilir.</p>
+          <p>Yurt dışına aktarım; başta KVKK'nın yurt dışına aktarıma ilişkin hükümleri olmak üzere ilgili mevzuatta öngörülen şartlara uygun olarak, aktarımın niteliğine göre yeterlilik kararı, uygun güvenceler, standart sözleşmeler, bağlayıcı şirket kuralları, istisnai aktarım halleri, açık rıza veya mevzuatta izin verilen diğer hukuki mekanizmalardan biri kapsamında gerçekleştirilebilir.</p>
+          <p>Yurt dışına aktarım yalnızca Uygulamanın çalıştırılması, kullanıcı hesabının yönetilmesi, abonelik doğrulaması, veri barındırma, analitik, hata tespiti, güvenlik, bildirim gönderimi ve hizmetin sağlanması için gerekli olduğu ölçüde yapılır.</p>
+          <p>Açık rızaya dayalı bir yurt dışına aktarım mekanizması kullanılması gereken hallerde, bu rıza ayrıca ve aydınlatma metninden bağımsız şekilde alınır.</p>
+        </section>
+
+        <section class="section" id="9-kisisel-verilerin-saklama-suresi">
+          <div class="section-header">
+            <div class="section-number">09</div>
+            <h2>9. Kişisel Verilerin Saklama Süresi</h2>
+          </div>
+          <p>Kişisel verileriniz, işleme amaçlarının gerektirdiği süre boyunca ve ilgili mevzuatta öngörülen saklama süreleriyle sınırlı olarak saklanır. Genel ilke olarak kişisel veriler; kullanıcı hesabınız aktif olduğu sürece, Uygulama hizmetlerinin sağlanması için gerekli olduğu sürece, yasal yükümlülükler ve uyuşmazlık süreçleri kapsamında gerekli olduğu sürece saklanabilir.</p>
+
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <th>Hesap, kimlik ve iletişim verileri</th>
+                <td>Hesap aktif olduğu sürece; hesap silme sonrası yasal, güvenlik veya uyuşmazlık gereklilikleri varsa gerekli süreyle sınırlı olarak.</td>
+              </tr>
+              <tr>
+                <th>Öğrenme ve kullanım verileri</th>
+                <td>Kullanıcıya çalışma geçmişi, istatistik, hedef, streak ve kişiselleştirme hizmetleri sunulması için gerekli olduğu sürece.</td>
+              </tr>
+              <tr>
+                <th>Abonelik ve satın alma doğrulama verileri</th>
+                <td>Abonelik erişimi, platform doğrulaması, yasal yükümlülükler, tüketici işlemleri ve uyuşmazlıklar için gerekli olduğu sürece.</td>
+              </tr>
+              <tr>
+                <th>Crash, hata ve performans verileri</th>
+                <td>Teknik hata giderme, güvenlik, performans analizi ve hizmet kalitesinin iyileştirilmesi için gerekli makul süre boyunca.</td>
+              </tr>
+              <tr>
+                <th>Geri bildirim, rapor ve destek kayıtları</th>
+                <td>Talebin değerlendirilmesi, hizmet kalitesinin iyileştirilmesi ve olası uyuşmazlıkların yönetimi için gerekli olduğu sürece.</td>
+              </tr>
+              <tr>
+                <th>Yedekleme kayıtları</th>
+                <td>Teknik yedekleme döngüleri kapsamında makul süre boyunca; mümkün olduğunda olağan işleme süreçlerinden ayrılarak.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <span class="page-marker">Sayfa 3 · idiomed KVKK Aydınlatma Metni</span>
+
+          <p>Hesabınızı sildiğinizde veya silme talebinde bulunduğunuzda, kişisel verileriniz mümkün olan ölçüde silinir, yok edilir veya anonim hale getirilir. Ancak hukuki yükümlülükler, güvenlik, ödeme/abonelik doğrulama, dolandırıcılık önleme, uyuşmazlık çözümü, yedekleme sistemleri veya mevzuat gereklilikleri nedeniyle bazı veriler daha uzun süre saklanabilir.</p>
+        </section>
+
+        <section class="section" id="10-ozel-nitelikli-kisisel-veriler">
+          <div class="section-header">
+            <div class="section-number">10</div>
+            <h2>10. Özel Nitelikli Kişisel Veriler</h2>
+          </div>
+          <p>Uygulama; sağlık verisi, hasta kaydı, biyometrik veri, gerçek klinik vaka bilgisi veya üçüncü kişilere ait özel nitelikli kişisel verileri toplamak amacıyla tasarlanmamıştır.</p>
+          <p>Kullanıcıların Uygulama üzerinden gerçek hasta bilgisi, sağlık kaydı, klinik dosya, hasta kimliği, görüntüleme sonucu, laboratuvar sonucu, reçete, epikriz, biyometrik veri veya üçüncü kişilere ait özel nitelikli veri göndermemesi gerekir.</p>
+          <p>Uygulamada yer alan sınav stresi, çalışma motivasyonu, çalışma alışkanlığı veya benzeri alanlar, kullanıcının eğitim deneyimini kişiselleştirmek amacıyla tasarlanmıştır ve tıbbi tanı, tedavi, sağlık durumu değerlendirmesi veya psikolojik/psikiyatrik değerlendirme amacı taşımaz.</p>
+          <p>İleride özel nitelikli kişisel veri işlenmesini gerektirecek bir özellik eklenirse, bu işleme faaliyeti yalnızca KVKK'ya uygun şekilde ve gerekli hukuki şartlar sağlanarak gerçekleştirilecektir.</p>
+        </section>
+
+        <section class="section" id="11-ai-ve-kullanici-verileri">
+          <div class="section-header">
+            <div class="section-number">11</div>
+            <h2>11. AI ve Kullanıcı Verileri</h2>
+          </div>
+          <p>Uygulama, kullanıcıya yönelik bir yapay zeka sohbet asistanı veya kullanıcı verilerini işleyen gerçek zamanlı AI danışmanlık hizmeti sunmak amacıyla tasarlanmamıştır.</p>
+          <p>Uygulama içerikleri AI-generated veya AI-assisted yöntemlerle oluşturulmuş olabilir. Ancak kullanıcı kişisel verilerinin, kullanıcıya yönelik AI işleme amacıyla yapay zeka model sağlayıcılarına kasıtlı olarak gönderilmesi mevcut yapıda amaçlanmamaktadır.</p>
+          <p>İleride kullanıcıya yönelik AI özellikleri eklenir veya kullanıcı verilerinin AI servis sağlayıcılarıyla paylaşılması gerekirse, bu Aydınlatma Metni güncellenecek ve gerekli olması halinde ayrıca açık rıza veya ilgili hukuki mekanizma işletilecektir.</p>
+        </section>
+
+        <section class="section" id="12-reklam-ve-hedefli-reklamcilik">
+          <div class="section-header">
+            <div class="section-number">12</div>
+            <h2>12. Reklam ve Hedefli Reklamcılık</h2>
+          </div>
+          <p>Uygulama mevcut yapıda reklam ağları kullanmaz ve kişisel verileri hedefli reklamcılık amacıyla üçüncü taraf reklam ağlarıyla paylaşmaz.</p>
+          <p>İleride reklam, hedefli reklamcılık, reklam ağı entegrasyonu, çerez/piksel veya benzeri takip teknolojileri eklenirse, bu Aydınlatma Metni ve ilgili gizlilik dokümanları güncellenecek; gerekli olduğu hallerde kullanıcılardan ayrıca onay veya tercih alınacaktır.</p>
+        </section>
+
+        <section class="section" id="13-ilgili-kisinin-kvkk-kapsamindaki-haklari">
+          <div class="section-header">
+            <div class="section-number">13</div>
+            <h2>13. İlgili Kişinin KVKK Kapsamındaki Hakları</h2>
+          </div>
+          <p>KVKK'nın 11. maddesi kapsamında, kişisel verisi işlenen ilgili kişi olarak veri sorumlusuna başvurarak aşağıdaki haklara sahipsiniz:</p>
+          <ul class="policy-list">
+            <li>kişisel verilerinizin işlenip işlenmediğini öğrenme;</li>
+            <li>kişisel verileriniz işlenmişse buna ilişkin bilgi talep etme;</li>
+            <li>kişisel verilerinizin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme;</li>
+            <li>yurt içinde veya yurt dışında kişisel verilerinizin aktarıldığı üçüncü kişileri bilme;</li>
+            <li>kişisel verilerinizin eksik veya yanlış işlenmiş olması halinde bunların düzeltilmesini isteme;</li>
+            <li>KVKK'da öngörülen şartlar çerçevesinde kişisel verilerinizin silinmesini veya yok edilmesini isteme;</li>
+            <li>düzeltme, silme veya yok etme işlemlerinin, kişisel verilerinizin aktarıldığı üçüncü kişilere bildirilmesini isteme;</li>
+            <li>işlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme;</li>
+            <li>kişisel verilerinizin kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız halinde zararın giderilmesini talep etme.</li>
+          </ul>
+        </section>
+
+        <section class="section" id="14-basvuru-yontemi">
+          <div class="section-header">
+            <div class="section-number">14</div>
+            <h2>14. Başvuru Yöntemi</h2>
+          </div>
+          <p>KVKK kapsamındaki haklarınızı kullanmak için başvurularınızı, kimliğinizi doğrulamaya elverişli bilgiler ve talebinizin açık açıklamasıyla birlikte aşağıdaki e-posta adresine iletebilirsiniz:</p>
+          <p>contact@citrapps.com</p>
+          <p>Başvurunuz, niteliğine göre en kısa sürede ve en geç ilgili mevzuatta öngörülen süre içinde sonuçlandırılır. Kural olarak bu süre başvurunun veri sorumlusuna ulaşmasından itibaren en geç 30 gündür.</p>
+          <p>Talebinizin niteliğine göre ek bilgi veya kimlik doğrulaması istenebilir. Yetkisiz kişilere veri açıklanmaması için gerekli güvenlik kontrolleri yapılabilir. Başvurunun ayrıca maliyet gerektirmesi halinde, ilgili mevzuatta belirtilen sınırlar dahilinde ücret talep edilebilir.</p>
+          <span class="page-marker">Sayfa 4 · idiomed KVKK Aydınlatma Metni</span>
+        </section>
+
+        <section class="section" id="15-diger-politika-ve-sartlarla-iliski">
+          <div class="section-header">
+            <div class="section-number">15</div>
+            <h2>15. Diğer Politika ve Şartlarla İlişki</h2>
+          </div>
+          <p>Bu Aydınlatma Metni, idiomed Privacy Policy ve idiomed End User License Agreement ile birlikte değerlendirilmelidir.</p>
+          <p>Privacy Policy, kişisel verilerin global gizlilik standartları kapsamında nasıl işlendiğini açıklar. EULA ise Uygulamanın kullanım şartlarını, lisans hükümlerini, abonelik kurallarını, yasaklı kullanımları, sorumluluk sınırlarını ve tıbbi sorumluluk reddini düzenler.</p>
+          <p>Bu Aydınlatma Metni ile Privacy Policy veya EULA arasında kişisel verilerin işlenmesine ilişkin bir farklılık olması halinde, Türkiye'deki kullanıcılar bakımından KVKK kapsamında zorunlu olan hükümler öncelikli olarak uygulanır.</p>
+        </section>
+
+        <section class="section" id="16-guncellemeler">
+          <div class="section-header">
+            <div class="section-number">16</div>
+            <h2>16. Güncellemeler</h2>
+          </div>
+          <p>Bu Aydınlatma Metni zaman zaman güncellenebilir. Güncellenmiş metin, 'Son Güncelleme' tarihi değiştirilerek yayımlanır.</p>
+          <p>Önemli değişiklikler yapılması halinde, gerekli olduğu ölçüde Uygulama içi bildirim, e-posta veya benzeri uygun yöntemlerle kullanıcılara ek bilgilendirme yapılabilir. Kullanıcıların bu metni düzenli olarak incelemesi önerilir.</p>
+        </section>
+
+        <section class="section" id="17-iletisim">
+          <div class="section-header">
+            <div class="section-number">17</div>
+            <h2>17. İletişim</h2>
+          </div>
+          <p>Bu Aydınlatma Metni veya kişisel verilerinizin işlenmesi hakkında soru, talep veya başvurularınız için bizimle iletişime geçebilirsiniz:</p>
+
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <th>Citrapps / idiomed</th>
+                <td>Veri Sorumlusu: Barış Kayırtar (Citrapps ticari adıyla)</td>
+              </tr>
+              <tr>
+                <th>E-posta</th>
+                <td>contact@citrapps.com</td>
+              </tr>
+              <tr>
+                <th>Konum</th>
+                <td>Mersin, Türkiye</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <span class="page-marker">Sayfa 5 · idiomed KVKK Aydınlatma Metni</span>
+        </section>
+      </article>
+    </div>
   </main>
+
+  <footer class="footer">
+    <div class="footer-left">
+      <strong>Citrapps Legal Center</strong><br />
+      © 2026 Citrapps. All rights reserved.<br />
+      <a href="mailto:contact@citrapps.com">contact@citrapps.com</a>
+
+      <div class="footer-names">
+        Barış Kayırtar<br />
+        Gürkan Toker
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://legal.citrapps.com/">Legal Center</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="eula.html">EULA</a>
+    </div>
+  </footer>
 </body>
 </html>
