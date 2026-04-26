@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>idiomed Legal Documents | Citrapps</title>
-  <meta name="description" content="Legal documents for idiomed by Citrapps." />
+  <title>Citrapps Legal Center</title>
+  <meta name="description" content="Legal center for Citrapps products." />
 
   <style>
     :root {
@@ -68,8 +68,8 @@
       font-size: 14px;
     }
 
-    .nav a:hover,
-    .brand:hover {
+    .brand:hover,
+    .nav a:hover {
       color: var(--accent);
     }
 
@@ -86,7 +86,7 @@
 
     .hero h1 {
       margin: 0;
-      max-width: 800px;
+      max-width: 820px;
       font-size: clamp(44px, 7vw, 78px);
       line-height: 0.98;
       letter-spacing: -0.07em;
@@ -166,9 +166,25 @@
     }
 
     .section-note {
-      max-width: 430px;
+      max-width: 440px;
       color: var(--muted);
       font-size: 15px;
+    }
+
+    .product-box {
+      border: 1px solid var(--border);
+      background: transparent;
+      padding: 30px;
+      margin-bottom: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .product-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
     }
 
     .documents {
@@ -188,7 +204,7 @@
       flex-direction: column;
       justify-content: space-between;
       gap: 32px;
-      transition: background 0.15s ease, color 0.15s ease;
+      transition: background 0.15s ease;
     }
 
     .document-card:hover {
@@ -286,11 +302,12 @@
         align-items: flex-start;
       }
 
-      .documents {
+      .product-box,
+      .simple-box {
         grid-template-columns: 1fr;
       }
 
-      .simple-box {
+      .documents {
         grid-template-columns: 1fr;
       }
 
@@ -345,42 +362,54 @@
       <a class="brand" href="https://citrapps.com/">Citrapps</a>
 
       <nav class="nav" aria-label="Main navigation">
-        <a href="https://citrapps.com/">home</a>
-        <a href="#documents">documents</a>
-        <a href="mailto:contact@citrapps.com">contact</a>
+        <a href="https://citrapps.com/">Home</a>
+        <a href="#idiomed-documents">Documents</a>
+        <a href="mailto:contact@citrapps.com">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="main">
     <section class="hero">
-      <h1>idiomed legal documents.</h1>
+      <h1>Citrapps Legal Center.</h1>
 
       <p>
-  These are the official legal documents for the idiomed mobile application,
-  a medical education app developed by Citrapps.
-</p>
+        This page provides access to legal documents for Citrapps products.
+        Product-specific documents are listed below.
+      </p>
 
       <div class="hero-actions">
-        <a class="button" href="#documents">View documents</a>
+        <a class="button" href="#idiomed-documents">View Documents</a>
         <a class="button secondary" href="https://citrapps.com/">Back to Citrapps</a>
       </div>
     </section>
 
-    <section class="section" id="documents">
+    <section class="section" id="idiomed-documents">
       <div class="section-head">
         <div>
-          <div class="section-label">Documents</div>
-          <h2>Legal center</h2>
+          <div class="section-label">Product Documents</div>
+          <h2>idiomed Legal Documents</h2>
         </div>
 
         <div class="section-note">
-  These documents apply specifically to the idiomed mobile application and
-  explain its privacy, terms, data protection, and license conditions.
-</div>
+          These are the official legal documents for the idiomed mobile
+          application, a medical education app developed by Citrapps.
+        </div>
       </div>
 
-      <div class="documents" aria-label="Legal documents">
+      <div class="product-box">
+        <div>
+          <h2>For idiomed users.</h2>
+        </div>
+
+        <p>
+          These documents explain the privacy, terms, data protection, and
+          license conditions that apply specifically to the idiomed mobile
+          application.
+        </p>
+      </div>
+
+      <div class="documents" aria-label="idiomed legal documents">
         <a class="document-card" href="privacy.html">
           <div class="document-top">
             <span class="document-label">Privacy</span>
@@ -420,8 +449,8 @@
           <div>
             <h3>KVKK Aydınlatma Metni</h3>
             <p>
-              Türkiye’deki kullanıcılar için kişisel verilerin işlenmesine ilişkin
-              aydınlatma metni.
+              Türkiye’deki kullanıcılar için kişisel verilerin işlenmesine
+              ilişkin aydınlatma metni.
             </p>
           </div>
         </a>
@@ -459,16 +488,16 @@
 
   <footer class="footer">
     <div class="footer-left">
-      <strong>idiomed legal documents</strong><br />
+      <strong>Citrapps Legal Center</strong><br />
       © 2026 Citrapps. All rights reserved.<br />
       <a href="mailto:contact@citrapps.com">contact@citrapps.com</a>
     </div>
 
     <div class="footer-links">
-      <a href="privacy.html">privacy policy</a>
-      <a href="terms.html">terms</a>
-      <a href="kvkk.html">kvkk</a>
-      <a href="eula.html">eula</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="kvkk.html">KVKK</a>
+      <a href="eula.html">EULA</a>
     </div>
   </footer>
 </body>
